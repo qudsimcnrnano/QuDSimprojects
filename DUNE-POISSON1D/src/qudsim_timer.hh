@@ -1,25 +1,3 @@
-/**
- * QuDSim Performance Timer - Drop-in instrumentation for DUNE/PETSc FEM codes
- * 
- * Usage:
- *   #include "qudsim_timer.hh"
- * 
- *   QuDSimTimer timer(MPI_COMM_WORLD);   // create once
- *   timer.start("Assembly");              // start a phase
- *   // ... do assembly ...
- *   timer.stop("Assembly");               // stop it
- *   timer.start("KSP Solve");
- *   // ... solve ...
- *   timer.stop("KSP Solve");
- *   timer.report();                       // print summary on rank 0
- *   timer.reportCSV("timings.csv");       // export CSV for plotting
- * 
- * For scaling studies, run your code with different -np values and
- * use the companion script scaling_study.sh
- *
- * Authors: QuDSim Team
- * License: Same as QuDSim
- */
 
 #ifndef QUDSIM_TIMER_HH
 #define QUDSIM_TIMER_HH
