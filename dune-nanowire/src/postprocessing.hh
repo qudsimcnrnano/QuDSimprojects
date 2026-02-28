@@ -4,34 +4,8 @@
 #include <dune/grid/common/mcmgmapper.hh>
 #include <dune/geometry/referenceelements.hh>
 
-// template<class GV, class Vector>
-// class PostProcessing
-// {
-//   static const int dim = GV::dimension;
-//   typedef typename GV::ctype ctype;
-//   typedef typename GV::template Codim<dim>::Iterator VertexIterator;
-//   typedef typename GV::template Codim<0>::Iterator LeafIterator;
-//   typedef typename GV::IntersectionIterator IntersectionIterator;
-//   //typedef typename Dune::template SingleCodimSingleGeomTypeMapper<GV,dim> VertexMap;
-//   typedef typename GV::IndexSet LeafIndexSet;
-//   typedef Dune::BCRSMatrix<Dune::FieldMatrix<ctype,1,1> > Matrix;
-//   typedef Dune::MultipleCodimMultipleGeomTypeMapper<GV> VertexMap;
-//   typedef Dune::MultipleCodimMultipleGeomTypeMapper<GV> ElementMap;
-//   typedef Dune::BlockVector<Dune::FieldVector<ctype,1> > ScalarField;
 
-// private:
-
-//   //Vector Q1;
-//   //Vector grad;
-
-//   Vector grad;
-//   std::vector < std::set<int> > adjacencyPattern;
-
-// public:
-//   const GV& gv;
-//   const LeafIndexSet& set;
-//   PostProcessing(const GV& gv);
-//   void eval_surface_xgrad(Vector& Q1, double& xgrad);
+1, double& xgrad);
 
 // };
 
