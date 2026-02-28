@@ -1,0 +1,6 @@
+CMAKE_FLAGS="-DCMAKE_C_COMPILER=gcc   -DCMAKE_CXX_COMPILER=g++   -DPETSC_DIR=/opt/local/petsc-3.15.2/ -DSLEPC_DIR=/opt/local/slepc-3.15.2/  -DPETSC_ARCH=arch-linux-cxx-debug    -DSLEPC_ARCH=arch-linux-cxx-debug   -DDUNE_DISABLE_PKGCONFIG=ON -DBLAS_LIBRARIES=/usr/lib64/libblas.so.3 -DLAPACK_LIBRARIES=/usr/lib64/liblapack.so.3  -DMETIS_INCLUDE_DIR=/opt/local/metis-5.1.0/include -DMETIS_LIBRARIES=/opt/local/metis-5.1.0/lib/libmetis.a -DPARMETIS_INCLUDE_DIR=/opt/local/parmetis-4.0.3/include -DPARMETIS_LIBRARIES=/opt/local/parmetis-4.0.3/lib/libparmetis.a "
+
+
+
+
+
