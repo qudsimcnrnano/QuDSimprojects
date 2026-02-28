@@ -1,10 +1,4 @@
-/**
- * QuDSim - PARALLEL Self-Consistent Schrodinger-Poisson Solver for MOSCAP
- * 2D FEM simulation: Metal Gate | SiO2 | Silicon (p-type)
- * MPI parallel using DUNE ALUGrid loadBalance + PETSc ISLocalToGlobalMapping
- * Uses: DUNE (grid/FEM), PETSc (linear algebra), SLEPc (eigenvalues)
- * Authors: QuDSim Team
- */
+
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -49,10 +43,7 @@
 using namespace Dune;
 using namespace QuDSim;
 
-// ============================================================================
-//  Global Index Map Builder (from dune-c4.cc)
-//  Coordinate-based approach since ALUGrid globalIdSet is not integer-castable
-// ============================================================================
+
 struct CoordTuple {
     double c[3];
     bool operator<(const CoordTuple& o) const {
@@ -148,9 +139,6 @@ void buildGlobalIndexMap(const GV& gv, std::vector<PetscInt>& l2g, PetscInt& glo
 }
 
 
-// ============================================================================
-//  Gather a distributed PETSc Vec to a local std::vector using l2g
-// ============================================================================
 template<class GV>
 void gatherVecToLocal(Vec petscVec, const GV& gv, const std::vector<PetscInt>& l2g,
                       std::vector<double>& localData)
@@ -175,10 +163,6 @@ void gatherVecToLocal(Vec petscVec, const GV& gv, const std::vector<PetscInt>& l
     VecDestroy(&u_all);
 }
 
-
-// ============================================================================
-//  Parallel Poisson FEM Solver (Newton-Raphson)
-// ============================================================================
 template<class GV>
 class ParallelPoissonFEM
 {
@@ -313,12 +297,7 @@ public:
         VecAssemblyBegin(b);
         VecAssemblyEnd(b);
 
-        // Boundary Conditions — same approach as serial dune-c3.cc:
-        //   A[i] = 0;  A[i][i] = 1;  b[i] = bc_value
-        // Applied to ALL boundary nodes (Dirichlet everywhere):
-        //   Gate  (x <= -6.9): phi = Vss (first iteration) or delta=0 (subsequent)
-        //   Bulk  (x >= 49.9): phi = 0   (first iteration) or delta=0 (subsequent)
-        //   Lateral (y=0,y=50): phi = 0  (first iteration) or delta=0 (subsequent)
+       
         {
             // Step 1: Each rank finds its local boundary nodes
             std::vector<PetscInt> myBcRows;
@@ -428,9 +407,6 @@ public:
 };
 
 
-// ============================================================================
-//  Parallel Schrodinger FEM Solver
-// ============================================================================
 template<class GV>
 class ParallelSchrodingerFEM
 {
@@ -751,15 +727,11 @@ KSPSetNormType(st_ksp, KSP_NORM_UNPRECONDITIONED);
 };
 
 
-// ============================================================================
-//                              MAIN
-// ============================================================================
+
 int main(int argc, char** argv)
 {
     try {
-        // ============================================================
-        // Initialize MPI + PETSc + SLEPc
-        // ============================================================
+        
         Dune::MPIHelper& helper = Dune::MPIHelper::instance(argc, argv);
         SlepcInitialize(&argc, &argv, NULL, NULL);
 
@@ -827,9 +799,7 @@ int main(int argc, char** argv)
                       << "    Na   = " << params.Na << " cm^-3\n\n";
         }
 
-        // ============================================================
-        // Grid Setup with loadBalance
-        // ============================================================
+        
         timer.start("Mesh Loading");
 
         constexpr int dim = 2;
@@ -864,9 +834,6 @@ int main(int argc, char** argv)
 
         timer.stop("Mesh Loading");
 
-        // ============================================================
-        // Initialize Data (local arrays)
-        // ============================================================
         int nElem = gv.size(0);
         Vector charge(N);          charge = 0.0;
         Vector potential(N);       potential = 0.0;
@@ -880,9 +847,7 @@ int main(int argc, char** argv)
         Vector epsi(nElem);    Vector emass(nElem);
         Vector hmass(nElem);   Vector regionid_vec(nElem);
 
-        // ============================================================
-        // Assign Materials (coordinate-based after loadBalance)
-        // ============================================================
+    
         timer.start("Material Setup");
 
         double Na_au = cm3_to_au3(params.Na);
@@ -908,9 +873,6 @@ int main(int argc, char** argv)
         timer.stop("Material Setup");
         if (rank == 0) std::cout << "Materials assigned.\n";
 
-        // ============================================================
-        // Create Parallel Solvers
-        // ============================================================
         ParallelSchrodingerFEM<GV> schElec(gv, l2g, globalN, 0, -Ef,
                                             params.num_eigenvalues, params.T);
         ParallelSchrodingerFEM<GV> schHole(gv, l2g, globalN, 1, Ef,
@@ -920,9 +882,7 @@ int main(int argc, char** argv)
         std::ofstream res_plot;
         if (rank == 0) res_plot.open("Results.dat");
 
-        // ============================================================
-        //       SELF-CONSISTENT LOOP
-        // ============================================================
+    
         timer.start("Self-Consistent Loop");
 
         int imax = params.max_iterations;
@@ -1065,9 +1025,7 @@ int main(int argc, char** argv)
 
         timer.stop("Self-Consistent Loop");
 
-        // ============================================================
-        // Post-Processing
-        // ============================================================
+      
         timer.start("Post-Processing");
 
         // Final VTK (collective)
