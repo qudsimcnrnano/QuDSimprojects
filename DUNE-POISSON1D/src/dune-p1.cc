@@ -1,8 +1,3 @@
-// poisson_petsc_slepc_mpi.cc
-// MPI + PETSc Poisson FEM (P1) on a Gmsh .msh grid using DUNE.
-// Corrected for parallel MPI execution with proper global index mapping
-// using ISLocalToGlobalMapping for PETSc matrix/vector assembly.
-
 #ifdef HAVE_CONFIG_H
 # include "config.h"
 #endif
@@ -130,9 +125,7 @@ public:
 
 
 // -------------------- Build global index mapping --------------------
-// Uses vertex coordinates to create a globally consistent, contiguous
-// numbering. ALUGrid's globalIdSet returns ALUGridId<ALUMacroKey> which
-// cannot be cast to a simple integer, so we use coordinates instead.
+
 template<class GV, class F>
 void P1ElementsPetsc<GV,F>::buildGlobalIndexMap(int mpiRank, int mpiSize)
 {
@@ -296,13 +289,7 @@ void P1ElementsPetsc<GV,F>::assemble(int& argc, char**& argv)
   // ---- P1 basis ----
   P1ShapeFunctionSet<ctype,ctype,dim> basis = P1ShapeFunctionSet<ctype,ctype,dim>::instance();
 
-  // ==========================================================================
-  // KEY APPROACH: Use MatSetLocalToGlobalMapping + MatSetValuesLocal
-  //
-  // This lets us insert values using LOCAL indices (0..N-1), and PETSc
-  // internally maps them to the correct global rows/columns using l2g.
-  // PETSc handles all the cross-rank communication automatically.
-  // ==========================================================================
+ 
 
   // ---- Create ISLocalToGlobalMapping from our l2g array ----
   ISLocalToGlobalMapping lgmap;
@@ -385,8 +372,7 @@ void P1ElementsPetsc<GV,F>::assemble(int& argc, char**& argv)
       }
     }
 
-    // Insert element matrix into PETSc using LOCAL indices
-    // PETSc maps them to global via lgmap automatically
+   
     MatSetValuesLocal(A, vertexsize, localRows.data(),
                          vertexsize, localRows.data(),
                          Ke.data(), ADD_VALUES);
@@ -424,7 +410,7 @@ void P1ElementsPetsc<GV,F>::assemble(int& argc, char**& argv)
     std::cout << "Matrix and vector assembled." << std::endl;
 
   // ---- Dirichlet BC (u = 0 on boundary) ----
-  // Collect GLOBAL indices of boundary vertices (MatZeroRows needs global)
+  
   std::vector<PetscInt> bcRows;
   for (LeafIterator it = gv.template begin<0>(); it != itend; ++it)
   {
@@ -578,9 +564,7 @@ int main(int argc, char** argv)
 
     // ---- VTK output ----
     timer.start("VTK Output");
-    // Gather the full solution vector to ALL ranks so each can write its
-    // local piece of the parallel VTK output.
-    // VecScatterCreateToAll is collective — all ranks must call it.
+    
     Vec u_all = nullptr;
     VecScatter scatterAll = nullptr;
 
