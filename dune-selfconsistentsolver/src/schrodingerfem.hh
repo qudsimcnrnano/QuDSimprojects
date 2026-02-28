@@ -1,10 +1,4 @@
-/**
- * QuDSim - Schrodinger FEM Solver using SLEPc
- * Solves: -1/(2*m_eff) * laplacian(psi) + V(x)*psi = E*psi
- * Generalized eigenvalue: (H + V*M)*psi = E*M*psi
- * Uses DUNE P1 FEM + SLEPc EPS
- * Authors: QuDSim Team
- */
+
 #ifndef QUDSIM_SCHRODINGERFEM_HH
 #define QUDSIM_SCHRODINGERFEM_HH
 
