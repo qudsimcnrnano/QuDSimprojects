@@ -1,6 +1,5 @@
 
-// modifying this code for true mode seperation on 17 april 2012
-// modifying this code for manipulation program on 18 april 2012
+
 #ifndef SCHRODINGERFEM_HH
 #define SCHRODINGERFEM_HH
 
