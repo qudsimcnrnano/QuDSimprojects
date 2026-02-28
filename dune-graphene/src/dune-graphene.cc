@@ -1,10 +1,4 @@
-/**
- * QuDSim - PARALLEL Graphene Quantum Dot Solver
- * 2D FEM: Schrodinger with PEP (quadratic polynomial eigenvalue)
- * Computes: eigenvalues, wavefunctions, LDOS, tunneling current, dI/dV
- * MPI parallel: DUNE ALUGrid loadBalance + PETSc ISLocalToGlobalMapping
- * Uses: DUNE (grid/FEM), PETSc (linear algebra), SLEPc (PEP eigenvalues)
- */
+
 #ifdef HAVE_CONFIG_H
 #include "config.h"
 #endif
@@ -47,9 +41,7 @@
 
 using namespace Dune;
 
-// ============================================================================
-//  Coordinate-based Global Index Map (same pattern as MOSCAP solver)
-// ============================================================================
+
 struct CoordTuple {
     double c[3];
     bool operator<(const CoordTuple& o) const {
@@ -140,9 +132,7 @@ void buildGlobalIndexMap(const GV& gv, std::vector<PetscInt>& l2g, PetscInt& glo
 }
 
 
-// ============================================================================
-//  Create a parallel PETSc matrix with ISLocalToGlobalMapping
-// ============================================================================
+
 Mat createParallelMat(PetscInt globalN, ISLocalToGlobalMapping lgmap, int maxNnz)
 {
     Mat M;
@@ -157,9 +147,7 @@ Mat createParallelMat(PetscInt globalN, ISLocalToGlobalMapping lgmap, int maxNnz
 }
 
 
-// ============================================================================
-//  Gather distributed PETSc Vec to local std::vector via l2g
-// ============================================================================
+
 template<class GV>
 void gatherVecToLocal(Vec petscVec, const GV& gv, const std::vector<PetscInt>& l2g,
                       std::vector<double>& localData)
@@ -185,15 +173,11 @@ void gatherVecToLocal(Vec petscVec, const GV& gv, const std::vector<PetscInt>& l
 }
 
 
-// ============================================================================
-//                              MAIN
-// ============================================================================
+
 int main(int argc, char** argv)
 {
     try {
-        // ============================================================
-        // Initialize MPI + PETSc + SLEPc
-        // ============================================================
+        
         Dune::MPIHelper& helper = Dune::MPIHelper::instance(argc, argv);
         SlepcInitialize(&argc, &argv, NULL, NULL);
 
@@ -210,9 +194,7 @@ int main(int argc, char** argv)
                       << "========================================================\n";
         }
 
-        // ============================================================
-        // Grid Setup with loadBalance
-        // ============================================================
+      
         timer.start("Mesh Loading");
 
         constexpr int dim = 2;
@@ -245,9 +227,7 @@ int main(int argc, char** argv)
 
         timer.stop("Mesh Loading");
 
-        // ============================================================
-        // Compute max adjacency for preallocation
-        // ============================================================
+      
         int maxNnz = 0;
         {
             std::vector<std::set<int>> adj(N);
@@ -264,16 +244,11 @@ int main(int argc, char** argv)
                 if ((int)adj[i].size() > maxNnz) maxNnz = (int)adj[i].size();
         }
 
-        // ============================================================
-        // Create ISLocalToGlobalMapping
-        // ============================================================
         ISLocalToGlobalMapping lgmap;
         ISLocalToGlobalMappingCreate(PETSC_COMM_WORLD, 1, N, l2g.data(),
                                      PETSC_COPY_VALUES, &lgmap);
 
-        // ============================================================
-        // Create parallel matrices
-        // ============================================================
+  
         timer.start("Assembly");
 
         Mat A_p  = createParallelMat(globalN, lgmap, maxNnz);
@@ -282,9 +257,7 @@ int main(int argc, char** argv)
         Mat C2_p = createParallelMat(globalN, lgmap, maxNnz);
         Mat H_p;  // will be built from MatDuplicate after A_p is assembled
 
-        // ============================================================
-        // FEM Assembly: stiffness A and mass B using MatSetValuesLocal
-        // ============================================================
+       
         P1ShapeFunctionSet<ctype,ctype,dim> basis = P1ShapeFunctionSet<ctype,ctype,dim>::instance();
 
         const double R_dot = 54.0;       // Quantum dot radius (a.u.)
@@ -345,11 +318,7 @@ int main(int argc, char** argv)
 
         if (rank == 0) std::cout << "A and B assembled.\n";
 
-        // ============================================================
-        // Boundary Conditions
-        //   At domain boundary: A[i]=0, A[i][i]=1, B[i]=0
-        //   C1[i][i] = 0.25/94.6,  C2[i][i] = i*(-0.5)
-        // ============================================================
+     
         {
             std::vector<PetscInt> bcRows;
             for (auto it = gv.template begin<0>(); it != gv.template end<0>(); ++it) {
@@ -416,10 +385,7 @@ int main(int argc, char** argv)
         timer.stop("Assembly");
         if (rank == 0) std::cout << "Assembly complete. H = A + C1 - fr*B\n";
 
-        // ============================================================
-        // PEP Solve:  D[0] + D[1]*lambda + D[2]*lambda^2 = 0
-        //   D[0] = -B,  D[1] = C2,  D[2] = H
-        // ============================================================
+        
         timer.start("PEP Solve");
 
         Mat D[3];
@@ -458,9 +424,7 @@ int main(int argc, char** argv)
 
         timer.stop("PEP Solve");
 
-        // ============================================================
-        // Extract eigenvalues and wavefunctions
-        // ============================================================
+     
         timer.start("Post-Processing");
 
         if (nconv > 0) {
@@ -511,9 +475,7 @@ int main(int argc, char** argv)
             }
             if (rank == 0) std::cout << "VTK output: graphene_gqd.pvtu\n";
 
-            // ============================================================
-            // LDOS Calculation (rank 0 output)
-            // ============================================================
+           
             if (rank == 0) {
                 const double he = 27.2;
                 const double eta = 0.001 / he;
@@ -558,9 +520,7 @@ int main(int argc, char** argv)
                 ldos_file.close();
             }
 
-            // ============================================================
-            // Tunneling Current & dI/dV (rank 0)
-            // ============================================================
+           
             if (rank == 0) {
                 const double he = 27.2;
                 const double hbar = 1.0;
