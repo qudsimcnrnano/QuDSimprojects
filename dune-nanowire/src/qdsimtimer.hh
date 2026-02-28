@@ -1,9 +1,3 @@
-// =============================================================================
-// QDSimTimer.hh - MPI-Aware Simulation Timer for GAA Nanowire FET
-// Profiles: Grid setup, Assembly, BC application, Eigenvalue solve,
-//           Poisson solve, Communication, Total runtime
-// Compatible with scaling.sh and plot_scaling.py for performance analysis
-// =============================================================================
 
 #ifndef QDSIMTIMER_HH
 #define QDSIMTIMER_HH
