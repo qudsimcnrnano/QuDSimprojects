@@ -1,31 +1,4 @@
-// poisson3d_petsc_slepc_mpi.cc
-// ============================================================================
-// 3D Poisson FEM (P1) solver on a tetrahedral Gmsh mesh using DUNE.
-// Uses PETSc for parallel linear algebra and KSP solvers.
-// SLEPc is initialized for potential eigenvalue extensions.
-// Fully MPI-parallel with proper global index mapping via ISLocalToGlobalMapping.
-//
-// Solves:  -∇²u(x,y,z) = ρ(x,y,z)   in Ω = [0,16]³
-//
-// Boundary conditions:
-//   Dirichlet: u = g(x,y,z) on ∂Ω
-//     - u = 1.0   on the face z = 0   (grounded plate at potential 1V)
-//     - u = -1.0  on the face z = 16  (grounded plate at potential -1V)
-//     - u = 0.0   on all other faces   (homogeneous Dirichlet)
-//
-// Charge density (RHS):
-//   ρ(x,y,z) = 100 · exp(-((x-8)² + (y-8)² + (z-8)²) / (2·σ²))
-//   A Gaussian charge blob centered at (8,8,8) with σ = 2.0
-//   This represents a localized point-like charge distribution.
-//
-// Compile (example):
-//   mpicxx -O2 -o poisson3d poisson3d_petsc_slepc_mpi.cc \
-//     $(pkg-config --cflags --libs dune-grid dune-common dune-geometry) \
-//     $(pkg-config --cflags --libs PETSc slepc) -lm
-//
-// Run:
-//   mpirun -np 4 ./poisson3d poisson3d.msh
-// ============================================================================
+
 
 #ifdef HAVE_CONFIG_H
 # include "config.h"
@@ -42,7 +15,6 @@
 #include <string>
 #include <numeric>
 
-// ─── DUNE headers ───────────────────────────────────────────────────────────
 #include <dune/common/parallel/mpihelper.hh>
 #include <dune/common/exceptions.hh>
 #include <dune/common/fvector.hh>
@@ -53,14 +25,11 @@
 #include <dune/grid/io/file/gmshreader.hh>
 #include <dune/grid/yaspgrid.hh>
 
-// ─── ALUGrid for 3D unstructured tetrahedral grids ──────────────────────────
 #include <dune/alugrid/3d/alugrid.hh>
 
-// ─── DUNE ISTL (optional, for adjacency patterns) ──────────────────────────
 #include <dune/istl/bvector.hh>
 #include <dune/istl/bcrsmatrix.hh>
 
-// ─── PETSc / SLEPc headers ─────────────────────────────────────────────────
 #include "petsc.h"
 #include "petscmat.h"
 #include "petscksp.h"
@@ -75,10 +44,7 @@
 #include "qudsim_timer.hh"
 
 
-// ============================================================================
-// Charge density function: Gaussian blob centered at (8,8,8)
-// ρ(x,y,z) = amplitude * exp(-|x - x₀|² / (2σ²))
-// ============================================================================
+
 template<class ctype, int dim>
 class GaussianCharge {
 public:
@@ -98,10 +64,8 @@ public:
 };
 
 
-// ============================================================================
-// Dirichlet boundary condition function
-// g(x,y,z) = +1.0 on z=0 face, -1.0 on z=16 face, 0.0 elsewhere
-// ============================================================================
+
+
 template<class ctype, int dim>
 class DirichletBC {
 public:
@@ -122,9 +86,7 @@ public:
 };
 
 
-// ============================================================================
-// PETSc-based P1 FEM assembler/solver for 3D Poisson equation
-// ============================================================================
+
 template<class GV, class RHSFunc, class BCFunc>
 class P1PoissonPetsc3D
 {
@@ -173,9 +135,7 @@ public:
 };
 
 
-// ============================================================================
-// Build global index mapping (coordinate-based)
-// ============================================================================
+
 template<class GV, class RHSFunc, class BCFunc>
 void P1PoissonPetsc3D<GV, RHSFunc, BCFunc>::buildGlobalIndexMap(int mpiRank, int mpiSize)
 {
@@ -277,9 +237,6 @@ void P1PoissonPetsc3D<GV, RHSFunc, BCFunc>::buildGlobalIndexMap(int mpiRank, int
 }
 
 
-// ============================================================================
-// Determine adjacency (sparsity) pattern from mesh connectivity
-// ============================================================================
 template<class GV, class RHSFunc, class BCFunc>
 void P1PoissonPetsc3D<GV, RHSFunc, BCFunc>::determineAdjacencyPattern()
 {
@@ -309,9 +266,6 @@ void P1PoissonPetsc3D<GV, RHSFunc, BCFunc>::determineAdjacencyPattern()
 }
 
 
-// ============================================================================
-// Assemble: stiffness matrix + RHS vector + Dirichlet BCs
-// ============================================================================
 template<class GV, class RHSFunc, class BCFunc>
 void P1PoissonPetsc3D<GV, RHSFunc, BCFunc>::assemble(int& argc, char**& argv)
 {
@@ -340,10 +294,6 @@ void P1PoissonPetsc3D<GV, RHSFunc, BCFunc>::assemble(int& argc, char**& argv)
   P1ShapeFunctionSet<ctype, ctype, dim> basis =
       P1ShapeFunctionSet<ctype, ctype, dim>::instance();
 
-  // ══════════════════════════════════════════════════════════════════════════
-  // Use MatSetLocalToGlobalMapping + MatSetValuesLocal
-  // Insert values using LOCAL indices; PETSc maps to global via l2g.
-  // ══════════════════════════════════════════════════════════════════════════
 
   // ── Create ISLocalToGlobalMapping ──
   ISLocalToGlobalMapping lgmap;
@@ -386,10 +336,6 @@ void P1PoissonPetsc3D<GV, RHSFunc, BCFunc>::assemble(int& argc, char**& argv)
   if (rank == 0)
     std::cout << "PETSc matrix created with local-to-global mapping." << std::endl;
 
-  // ══════════════════════════════════════════════════════════════════════════
-  // Element loop: assemble stiffness matrix K and RHS vector f
-  // For each tetrahedron, compute 4×4 element stiffness and 4×1 load vector
-  // ══════════════════════════════════════════════════════════════════════════
   for (auto it = gv.template begin<0>(); it != gv.template end<0>(); ++it)
   {
     auto geo = it->geometry();
@@ -466,18 +412,6 @@ void P1PoissonPetsc3D<GV, RHSFunc, BCFunc>::assemble(int& argc, char**& argv)
   if (rank == 0)
     std::cout << "Matrix and vector assembled." << std::endl;
 
-  // ══════════════════════════════════════════════════════════════════════════
-  // Apply inhomogeneous Dirichlet boundary conditions
-  //
-  // For inhomogeneous BCs (u = g on ∂Ω where g ≠ 0):
-  //   1. Identify boundary DOFs and their prescribed values
-  //   2. Zero the BC rows in A, put 1.0 on diagonal
-  //   3. Set b[i] = g(x_i) at boundary DOFs
-  //
-  // Note: For a more accurate "lift" approach, one would modify the RHS
-  // to account for the contribution of boundary values to interior DOFs.
-  // Here we use the simpler row-zeroing approach which is standard.
-  // ══════════════════════════════════════════════════════════════════════════
 
   // Collect boundary DOFs: global indices and their prescribed values
   std::vector<PetscInt> bcGlobalRows;
@@ -549,9 +483,6 @@ void P1PoissonPetsc3D<GV, RHSFunc, BCFunc>::assemble(int& argc, char**& argv)
 }
 
 
-// ============================================================================
-// Solve the linear system A u = b using PETSc KSP (CG solver)
-// ============================================================================
 template<class GV, class RHSFunc, class BCFunc>
 void P1PoissonPetsc3D<GV, RHSFunc, BCFunc>::solve(int& argc, char**& argv)
 {
@@ -591,9 +522,6 @@ void P1PoissonPetsc3D<GV, RHSFunc, BCFunc>::solve(int& argc, char**& argv)
 }
 
 
-// ============================================================================
-// MAIN
-// ============================================================================
 using namespace Dune;
 
 int main(int argc, char** argv)
@@ -668,9 +596,6 @@ int main(int argc, char** argv)
     if (helper.rank() == 0)
       std::cout << "Solve done! Writing VTK output..." << std::endl;
 
-    // ══════════════════════════════════════════════════════════════════════════
-    // VTK output: scatter full solution to all ranks for parallel VTK writing
-    // ══════════════════════════════════════════════════════════════════════════
     timer.start("VTK Output");
 
     Vec u_all = nullptr;
