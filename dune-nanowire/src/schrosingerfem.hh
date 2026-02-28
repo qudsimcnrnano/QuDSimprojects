@@ -1,12 +1,4 @@
-// =============================================================================
-// Parallel MPI Schrodinger FEM Solver for GAA Nanowire
-// Key changes from serial:
-//   1. PETSc matrices: MATSEQAIJ -> MATMPIAIJ (distributed across MPI ranks)
-//   2. SLEPc EPS solver: MPI_COMM_WORLD (parallel eigenvalue solve)
-//   3. Local-to-global index mapping for parallel assembly
-//   4. Parallel wavefunction extraction and normalization
-//   5. File I/O restricted to rank 0
-// =============================================================================
+
 
 #ifndef SCHRODINGERFEM_PARALLEL_HH
 #define SCHRODINGERFEM_PARALLEL_HH
