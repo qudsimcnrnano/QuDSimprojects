@@ -1,10 +1,4 @@
-/**
- * QuDSim - Poisson FEM Solver (Newton-Raphson) for MOSCAP
- * Solves: -div(eps * grad(phi)) = rho(phi)
- * NR linearization: (K - dRho*M)*delta_phi = -(K*phi + rho)
- * Uses DUNE P1 FEM + PETSc KSP
- * Authors: QuDSim Team
- */
+
 #ifndef QUDSIM_POISSONFEM_HH
 #define QUDSIM_POISSONFEM_HH
 
