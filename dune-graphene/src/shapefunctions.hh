@@ -2,10 +2,6 @@
 #define SHAPEFUNCTIONS_HH
 
 #include <dune/common/fvector.hh>
-
-// LinearShapeFunction:
-// represents a shape function and provides methods to evaluate the function
-// and its gradient
 template<class ctype, class rtype, int dim>
 class LinearShapeFunction
 {
