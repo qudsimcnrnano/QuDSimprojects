@@ -1,11 +1,4 @@
-// =============================================================================
-// Parallel MPI Poisson FEM Solver with Newton-Raphson
-// Key changes from serial:
-//   1. Uses DUNE-ISTL parallel solvers (Overlapping Schwarz preconditioner)
-//   2. MPI communication for ghost vertex data exchange
-//   3. Parallel matrix assembly with local indices
-//   4. File I/O restricted to rank 0
-// =============================================================================
+
 
 #ifndef POISSONFEM_PARALLEL_HH
 #define POISSONFEM_PARALLEL_HH
