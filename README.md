@@ -72,3 +72,10 @@ make
 
 ### running
 /opt/local/dune_210/dune-common-2.10.dev20221009/bin/dunecontrol --opts=config321.opts --only=dune-projectname all
+
+### contact
+Maintainer: [ASHUTOSH MAHAJAN]
+
+GitHub: https://github.com/qudsimcnrnano
+
+Email: [ashutosh.mahajan@vit.ac.in]
