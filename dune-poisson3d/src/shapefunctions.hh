@@ -1,16 +1,3 @@
-/**
- * P1 (linear) shape functions for simplices in 2D (triangles) and 3D (tetrahedra).
- *
- * For a simplex with (dim+1) vertices, the P1 basis functions are:
- *   phi_0 = 1 - xi_1 - xi_2 - ... - xi_dim
- *   phi_i = xi_i   for i = 1, ..., dim
- *
- * This file provides:
- *   - P1ShapeFunction<CT,RT,dim>      : a single basis function
- *   - P1ShapeFunctionSet<CT,RT,dim>   : the set of (dim+1) basis functions
- *
- * Compatible with DUNE's FieldVector for positions and gradients.
- */
 
 #ifndef SHAPEFUNCTIONS_HH
 #define SHAPEFUNCTIONS_HH
@@ -41,7 +28,7 @@ public:
     }
   }
 
-  /** Evaluate the gradient (in reference coordinates) at local coordinate xi */
+
   Dune::FieldVector<RT, dim> evaluateGradient(const Dune::FieldVector<CT, dim>& /*xi*/) const
   {
     Dune::FieldVector<RT, dim> grad(0.0);
@@ -59,7 +46,7 @@ private:
 };
 
 
-// ─── Set of all (dim+1) P1 shape functions on a simplex ─────────────────────
+
 template<class CT, class RT, int dim>
 class P1ShapeFunctionSet
 {
