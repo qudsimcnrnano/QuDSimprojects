@@ -1,9 +1,3 @@
-// =============================================================================
-// Parallel MPI version of GAA Nanowire FET Simulator
-// Schrodinger-Poisson Self-Consistent Solver
-// Uses: ALUGrid (parallel partitioned), PETSc/SLEPc (MPI eigenvalue solver)
-//       DUNE-ISTL with Overlapping Schwarz for Poisson
-// =============================================================================
 
 #ifdef HAVE_CONFIG_H
 #include "config.h"
@@ -70,7 +64,7 @@ int main(int argc, char** argv)
 {
   try {
 
-    // ========================= MPI Initialization ===========================
+    
     Dune::MPIHelper& helper = Dune::MPIHelper::instance(argc, argv);
     int rank = helper.rank();
     int size = helper.size();
