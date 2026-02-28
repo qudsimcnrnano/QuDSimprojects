@@ -1,0 +1,12 @@
+################################
+# Dune module information file #
+################################
+
+# Name of the module
+Module: dune-p1
+Version: 1
+Maintainer: a@.
+# Required build dependencies
+Depends: dune-common dune-geometry dune-grid dune-istl dune-localfunctions dune-alugrid dune-grid-howto dune-gmsh4
+# Optional build dependencies
+#Suggests:
