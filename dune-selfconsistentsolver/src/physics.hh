@@ -1,9 +1,4 @@
-/**
- * QuDSim - Physical Constants and Material Parameters
- * All constants in Hartree atomic units unless noted.
- * Conversion: 1 Hartree = 27.211 eV, 1 a.u.(length) = 0.05291 nm
- * Authors: QuDSim Team
- */
+
 #ifndef QUDSIM_PHYSICS_HH
 #define QUDSIM_PHYSICS_HH
 
