@@ -1,6 +1,6 @@
-#ifndef DUNE_NANOWIRE_HH
-#define DUNE_NANOWIRE_HH
+#ifndef DUNE_HIGHK_HH
+#define DUNE_HIGHK_HH
 
 // add your classes here
 
-#endif // DUNE_NANOWIRE_HH
+#endif // DUNE_HIGHK_HH
