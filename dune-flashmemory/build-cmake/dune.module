@@ -3,7 +3,7 @@
 ################################
 
 # Name of the module
-Module: dune-nanowire
+Module: dune-highk
 Version: 1
 Maintainer: a@.
 # Required build dependencies
