@@ -1,0 +1,34 @@
+if(NOT dune-sc1_FOUND)
+# Whether this module is installed or not
+set(dune-sc1_INSTALLED @MODULE_INSTALLED@)
+
+# Settings specific to the module
+@dune-sc1_INIT@
+# Package initialization
+@PACKAGE_INIT@
+
+#report other information
+set_and_check(dune-sc1_PREFIX "${PACKAGE_PREFIX_DIR}")
+set_and_check(dune-sc1_INCLUDE_DIRS "@PACKAGE_CMAKE_INSTALL_INCLUDEDIR@")
+set(dune-sc1_CXX_FLAGS "-std=c++17 /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libpetsc.so.3.15 /opt/local/slepc-3.15.2/arch-linux-cxx-debug/lib/libslepc.so.3.15")
+set(dune-sc1_CXX_FLAGS_DEBUG "-g")
+set(dune-sc1_CXX_FLAGS_MINSIZEREL "-Os -DNDEBUG")
+set(dune-sc1_CXX_FLAGS_RELEASE "-O3 -DNDEBUG")
+set(dune-sc1_CXX_FLAGS_RELWITHDEBINFO "-O2 -g -DNDEBUG")
+set(dune-sc1_DEPENDS "@dune-sc1_DEPENDS@")
+set(dune-sc1_SUGGESTS "@dune-sc1_SUGGESTS@")
+set(dune-sc1_MODULE_PATH "@PACKAGE_DUNE_INSTALL_MODULEDIR@")
+set(dune-sc1_LIBRARIES "@dune-sc1_LIBRARIES@")
+set(dune-sc1_HASPYTHON @DUNE_MODULE_HASPYTHON@)
+set(dune-sc1_PYTHONREQUIRES "@DUNE_MODULE_PYTHONREQUIRES@")
+
+# Lines that are set by the CMake build system via the variable DUNE_CUSTOM_PKG_CONFIG_SECTION
+
+
+#import the target
+if(dune-sc1_LIBRARIES)
+  get_filename_component(_dir "${CMAKE_CURRENT_LIST_FILE}" PATH)
+  include("${_dir}/dune-sc1-targets.cmake")
+endif()
+
+endif()
