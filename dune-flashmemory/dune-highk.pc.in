@@ -1,0 +1,15 @@
+prefix=/opt/local/dune
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+CXX=g++
+CC=gcc
+DEPENDENCIES= dune-grid   dune-istl   dune-localfunctions   dune-common  
+
+Name: dune-highk
+Version: 1.0
+Description: dune-highk module
+URL: http://dune-project.org/
+Requires: dune-grid dune-istl dune-localfunctions dune-common
+Libs: -L
+Cflags: -I
