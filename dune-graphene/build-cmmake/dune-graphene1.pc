@@ -1,0 +1,15 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+CXX=/apps/codes/gcc-11.4.0/bin/g++ 
+CC=/apps/codes/gcc-11.4.0/bin/gcc
+DEPENDENCIES=
+
+Name: dune-graphene1
+Version: 1
+Description: dune-graphene1 module
+URL: http://dune-project.org/
+Requires: dune-common dune-geometry dune-grid dune-istl dune-localfunctions dune-alugrid dune-grid-howto dune-gmsh4
+Libs: -L${libdir}
+Cflags: -I${includedir}
