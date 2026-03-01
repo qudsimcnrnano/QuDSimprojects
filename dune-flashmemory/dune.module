@@ -1,0 +1,10 @@
+################################
+# Dune module information file #
+################################
+
+#Name of the module
+Module: dune-highk
+Version: 1.0
+Maintainer: tushar.gangane675@gmail.com
+#depending on 
+Depends: dune-grid dune-istl dune-localfunctions dune-common
