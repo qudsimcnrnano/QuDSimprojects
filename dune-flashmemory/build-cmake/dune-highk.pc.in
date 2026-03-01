@@ -8,7 +8,7 @@ DEPENDENCIES=@REQUIRES@
 
 Name: @PACKAGE_NAME@
 Version: @VERSION@
-Description: dune-nanowire module
+Description: dune-highk module
 URL: http://dune-project.org/
 Requires: dune-common dune-geometry dune-grid dune-istl dune-localfunctions dune-alugrid dune-grid-howto dune-gmsh4
 Libs: -L${libdir}
