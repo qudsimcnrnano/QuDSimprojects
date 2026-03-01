@@ -1,0 +1,1535 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake:204 (message)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      The system is: Linux - 3.10.0-1160.114.2.el7.x86_64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /apps/codes/gcc-11.4.0/bin/g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/3.26.0-rc1/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-ARN0jN"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-ARN0jN"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-ARN0jN
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e983e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e983e.dir/build.make CMakeFiles/cmTC_e983e.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-ARN0jN'
+        Building CXX object CMakeFiles/cmTC_e983e.dir/CMakeCXXCompilerABI.cpp.o
+        /apps/codes/gcc-11.4.0/bin/g++   -v -o CMakeFiles/cmTC_e983e.dir/CMakeCXXCompilerABI.cpp.o -c /apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/apps/codes/gcc-11.4.0/bin/g++
+        Target: x86_64-pc-linux-gnu
+        Configured with: ./configure --disable-multilib --prefix=/apps/codes/gcc-11.4.0/
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 11.4.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e983e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e983e.dir/'
+         /apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/cc1plus -quiet -v -D_GNU_SOURCE /apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_e983e.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/cch2FMzL.s
+        GNU C++17 (GCC) version 11.4.0 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 11.4.0, GMP version 6.1.0, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/include/c++/11"
+        ignoring nonexistent directory "/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../x86_64-pc-linux-gnu/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /opt/local/petsc-3.15.2/arch-linux-cxx-debug/include/
+         /opt/local/slepc-3.15.2/arch-linux-cxx-debug/include/
+         /opt/local/slepc-3.15.2/include/
+         /opt/local/petsc-3.15.2/include/
+         /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../include/c++/11.4.0
+         /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../include/c++/11.4.0/x86_64-pc-linux-gnu
+         /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../include/c++/11.4.0/backward
+         /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include
+         /usr/local/include
+         /apps/codes/gcc-11.4.0/include
+         /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include-fixed
+         /usr/include
+        End of search list.
+        GNU C++17 (GCC) version 11.4.0 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 11.4.0, GMP version 6.1.0, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 7cee2bc4428bfbed51608a5f8c00acb7
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e983e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e983e.dir/'
+         as -v --64 -o CMakeFiles/cmTC_e983e.dir/CMakeCXXCompilerABI.cpp.o /tmp/cch2FMzL.s
+        GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7_9.1
+        COMPILER_PATH=/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/
+        LIBRARY_PATH=/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e983e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e983e.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_e983e
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e983e.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/g++  -v CMakeFiles/cmTC_e983e.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_e983e 
+        Using built-in specs.
+        COLLECT_GCC=/apps/codes/gcc-11.4.0/bin/g++
+        COLLECT_LTO_WRAPPER=/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/lto-wrapper
+        Target: x86_64-pc-linux-gnu
+        Configured with: ./configure --disable-multilib --prefix=/apps/codes/gcc-11.4.0/
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 11.4.0 (GCC) 
+        COMPILER_PATH=/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/
+        LIBRARY_PATH=/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e983e' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e983e.'
+         /apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/collect2 -plugin /apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/liblto_plugin.so -plugin-opt=/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccnJXNUG.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_e983e /lib/../lib64/crt1.o /lib/../lib64/crti.o /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/crtbegin.o -L/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0 -L/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../.. CMakeFiles/cmTC_e983e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/crtend.o /lib/../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e983e' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e983e.'
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-ARN0jN'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/opt/local/petsc-3.15.2/arch-linux-cxx-debug/include/]
+          add: [/opt/local/slepc-3.15.2/arch-linux-cxx-debug/include/]
+          add: [/opt/local/slepc-3.15.2/include/]
+          add: [/opt/local/petsc-3.15.2/include/]
+          add: [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../include/c++/11.4.0]
+          add: [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../include/c++/11.4.0/x86_64-pc-linux-gnu]
+          add: [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../include/c++/11.4.0/backward]
+          add: [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include]
+          add: [/usr/local/include]
+          add: [/apps/codes/gcc-11.4.0/include]
+          add: [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include-fixed]
+          add: [/usr/include]
+        end of search list found
+        collapse include dir [/opt/local/petsc-3.15.2/arch-linux-cxx-debug/include/] ==> [/opt/local/petsc-3.15.2/arch-linux-cxx-debug/include]
+        collapse include dir [/opt/local/slepc-3.15.2/arch-linux-cxx-debug/include/] ==> [/opt/local/slepc-3.15.2/arch-linux-cxx-debug/include]
+        collapse include dir [/opt/local/slepc-3.15.2/include/] ==> [/opt/local/slepc-3.15.2/include]
+        collapse include dir [/opt/local/petsc-3.15.2/include/] ==> [/opt/local/petsc-3.15.2/include]
+        collapse include dir [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../include/c++/11.4.0] ==> [/apps/codes/gcc-11.4.0/include/c++/11.4.0]
+        collapse include dir [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../include/c++/11.4.0/x86_64-pc-linux-gnu] ==> [/apps/codes/gcc-11.4.0/include/c++/11.4.0/x86_64-pc-linux-gnu]
+        collapse include dir [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../include/c++/11.4.0/backward] ==> [/apps/codes/gcc-11.4.0/include/c++/11.4.0/backward]
+        collapse include dir [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include] ==> [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/apps/codes/gcc-11.4.0/include] ==> [/apps/codes/gcc-11.4.0/include]
+        collapse include dir [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include-fixed] ==> [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include-fixed]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        implicit include dirs: [/opt/local/petsc-3.15.2/arch-linux-cxx-debug/include;/opt/local/slepc-3.15.2/arch-linux-cxx-debug/include;/opt/local/slepc-3.15.2/include;/opt/local/petsc-3.15.2/include;/apps/codes/gcc-11.4.0/include/c++/11.4.0;/apps/codes/gcc-11.4.0/include/c++/11.4.0/x86_64-pc-linux-gnu;/apps/codes/gcc-11.4.0/include/c++/11.4.0/backward;/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include;/usr/local/include;/apps/codes/gcc-11.4.0/include;/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include-fixed;/usr/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:2 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-ARN0jN]
+        ignore line: []
+        ignore line: [Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_e983e/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_e983e.dir/build.make CMakeFiles/cmTC_e983e.dir/build]
+        ignore line: [gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-ARN0jN']
+        ignore line: [Building CXX object CMakeFiles/cmTC_e983e.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/apps/codes/gcc-11.4.0/bin/g++   -v -o CMakeFiles/cmTC_e983e.dir/CMakeCXXCompilerABI.cpp.o -c /apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/apps/codes/gcc-11.4.0/bin/g++]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: ./configure --disable-multilib --prefix=/apps/codes/gcc-11.4.0/]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 11.4.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e983e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e983e.dir/']
+        ignore line: [ /apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/cc1plus -quiet -v -D_GNU_SOURCE /apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_e983e.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o /tmp/cch2FMzL.s]
+        ignore line: [GNU C++17 (GCC) version 11.4.0 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.1.0  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.18-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/include/c++/11"]
+        ignore line: [ignoring nonexistent directory "/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /opt/local/petsc-3.15.2/arch-linux-cxx-debug/include/]
+        ignore line: [ /opt/local/slepc-3.15.2/arch-linux-cxx-debug/include/]
+        ignore line: [ /opt/local/slepc-3.15.2/include/]
+        ignore line: [ /opt/local/petsc-3.15.2/include/]
+        ignore line: [ /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../include/c++/11.4.0]
+        ignore line: [ /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../include/c++/11.4.0/x86_64-pc-linux-gnu]
+        ignore line: [ /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../include/c++/11.4.0/backward]
+        ignore line: [ /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /apps/codes/gcc-11.4.0/include]
+        ignore line: [ /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include-fixed]
+        ignore line: [ /usr/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C++17 (GCC) version 11.4.0 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.1.0  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.18-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 7cee2bc4428bfbed51608a5f8c00acb7]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e983e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e983e.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_e983e.dir/CMakeCXXCompilerABI.cpp.o /tmp/cch2FMzL.s]
+        ignore line: [GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7_9.1]
+        ignore line: [COMPILER_PATH=/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_e983e.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_e983e.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_e983e]
+        ignore line: [/apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e983e.dir/link.txt --verbose=1]
+        ignore line: [/apps/codes/gcc-11.4.0/bin/g++  -v CMakeFiles/cmTC_e983e.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_e983e ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/apps/codes/gcc-11.4.0/bin/g++]
+        ignore line: [COLLECT_LTO_WRAPPER=/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/lto-wrapper]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: ./configure --disable-multilib --prefix=/apps/codes/gcc-11.4.0/]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 11.4.0 (GCC) ]
+        ignore line: [COMPILER_PATH=/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_e983e' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_e983e.']
+        link line: [ /apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/collect2 -plugin /apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/liblto_plugin.so -plugin-opt=/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccnJXNUG.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_e983e /lib/../lib64/crt1.o /lib/../lib64/crti.o /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/crtbegin.o -L/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0 -L/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../.. CMakeFiles/cmTC_e983e.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/crtend.o /lib/../lib64/crtn.o]
+          arg [/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccnJXNUG.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_e983e] ==> ignore
+          arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+          arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+          arg [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/crtbegin.o] ==> obj [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/crtbegin.o]
+          arg [-L/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0] ==> dir [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0]
+          arg [-L/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../lib64] ==> dir [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../..] ==> dir [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../..]
+          arg [CMakeFiles/cmTC_e983e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lm] ==> lib [m]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lc] ==> lib [c]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/crtend.o] ==> obj [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/crtend.o]
+          arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+        collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+        collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+        collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+        collapse library dir [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0] ==> [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0]
+        collapse library dir [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../lib64] ==> [/apps/codes/gcc-11.4.0/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../..] ==> [/apps/codes/gcc-11.4.0/lib]
+        implicit libs: [stdc++;m;gcc_s;gcc;c;gcc_s;gcc]
+        implicit objs: [/lib64/crt1.o;/lib64/crti.o;/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/crtbegin.o;/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/crtend.o;/lib64/crtn.o]
+        implicit dirs: [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0;/apps/codes/gcc-11.4.0/lib64;/lib64;/usr/lib64;/apps/codes/gcc-11.4.0/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneMacros.cmake:31 (enable_language)"
+      - "CMakeLists.txt:16 (include)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /apps/codes/gcc-11.4.0/bin/gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/3.26.0-rc1/CompilerIdC/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneMacros.cmake:31 (enable_language)"
+      - "CMakeLists.txt:16 (include)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-qXOz3i"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-qXOz3i"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-qXOz3i
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0d385/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0d385.dir/build.make CMakeFiles/cmTC_0d385.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-qXOz3i'
+        Building C object CMakeFiles/cmTC_0d385.dir/CMakeCCompilerABI.c.o
+        /apps/codes/gcc-11.4.0/bin/gcc   -v -o CMakeFiles/cmTC_0d385.dir/CMakeCCompilerABI.c.o -c /apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/apps/codes/gcc-11.4.0/bin/gcc
+        Target: x86_64-pc-linux-gnu
+        Configured with: ./configure --disable-multilib --prefix=/apps/codes/gcc-11.4.0/
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 11.4.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0d385.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0d385.dir/'
+         /apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/cc1 -quiet -v /apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_0d385.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccp4un3P.s
+        GNU C17 (GCC) version 11.4.0 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 11.4.0, GMP version 6.1.0, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/include/tirpc"
+        ignoring duplicate directory "/usr/include/"
+        ignoring duplicate directory "/usr/local/include"
+        ignoring duplicate directory "/apps/codes/gcc-11.4.0/include"
+        ignoring nonexistent directory "/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../x86_64-pc-linux-gnu/include"
+        ignoring duplicate directory "/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /apps/codes/gcc-11.4.0/include
+         /usr/include
+         /usr/local/include
+         /opt/local/petsc-3.15.2/include
+         /opt/local/slepc-3.15.2/include
+         /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include
+         /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include-fixed
+        End of search list.
+        GNU C17 (GCC) version 11.4.0 (x86_64-pc-linux-gnu)
+        	compiled by GNU C version 11.4.0, GMP version 6.1.0, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 116d3183087f7d079e76276a8d006776
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0d385.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0d385.dir/'
+         as -v --64 -o CMakeFiles/cmTC_0d385.dir/CMakeCCompilerABI.c.o /tmp/ccp4un3P.s
+        GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7_9.1
+        COMPILER_PATH=/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/
+        LIBRARY_PATH=/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0d385.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0d385.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_0d385
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0d385.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/gcc  -v CMakeFiles/cmTC_0d385.dir/CMakeCCompilerABI.c.o -o cmTC_0d385 
+        Using built-in specs.
+        COLLECT_GCC=/apps/codes/gcc-11.4.0/bin/gcc
+        COLLECT_LTO_WRAPPER=/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/lto-wrapper
+        Target: x86_64-pc-linux-gnu
+        Configured with: ./configure --disable-multilib --prefix=/apps/codes/gcc-11.4.0/
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 11.4.0 (GCC) 
+        COMPILER_PATH=/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/
+        LIBRARY_PATH=/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0d385' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0d385.'
+         /apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/collect2 -plugin /apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/liblto_plugin.so -plugin-opt=/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKoGmkT.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_0d385 /lib/../lib64/crt1.o /lib/../lib64/crti.o /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/crtbegin.o -L/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0 -L/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../.. CMakeFiles/cmTC_0d385.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/crtend.o /lib/../lib64/crtn.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0d385' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0d385.'
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-qXOz3i'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneMacros.cmake:31 (enable_language)"
+      - "CMakeLists.txt:16 (include)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/apps/codes/gcc-11.4.0/include]
+          add: [/usr/include]
+          add: [/usr/local/include]
+          add: [/opt/local/petsc-3.15.2/include]
+          add: [/opt/local/slepc-3.15.2/include]
+          add: [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include]
+          add: [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include-fixed]
+        end of search list found
+        collapse include dir [/apps/codes/gcc-11.4.0/include] ==> [/apps/codes/gcc-11.4.0/include]
+        collapse include dir [/usr/include] ==> [/usr/include]
+        collapse include dir [/usr/local/include] ==> [/usr/local/include]
+        collapse include dir [/opt/local/petsc-3.15.2/include] ==> [/opt/local/petsc-3.15.2/include]
+        collapse include dir [/opt/local/slepc-3.15.2/include] ==> [/opt/local/slepc-3.15.2/include]
+        collapse include dir [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include] ==> [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include]
+        collapse include dir [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include-fixed] ==> [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include-fixed]
+        implicit include dirs: [/apps/codes/gcc-11.4.0/include;/usr/include;/usr/local/include;/opt/local/petsc-3.15.2/include;/opt/local/slepc-3.15.2/include;/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include;/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include-fixed]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake:152 (message)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneMacros.cmake:31 (enable_language)"
+      - "CMakeLists.txt:16 (include)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-qXOz3i]
+        ignore line: []
+        ignore line: [Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0d385/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0d385.dir/build.make CMakeFiles/cmTC_0d385.dir/build]
+        ignore line: [gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-qXOz3i']
+        ignore line: [Building C object CMakeFiles/cmTC_0d385.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/apps/codes/gcc-11.4.0/bin/gcc   -v -o CMakeFiles/cmTC_0d385.dir/CMakeCCompilerABI.c.o -c /apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/apps/codes/gcc-11.4.0/bin/gcc]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: ./configure --disable-multilib --prefix=/apps/codes/gcc-11.4.0/]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 11.4.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0d385.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0d385.dir/']
+        ignore line: [ /apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/cc1 -quiet -v /apps/codes/cmake-3.26/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_0d385.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o /tmp/ccp4un3P.s]
+        ignore line: [GNU C17 (GCC) version 11.4.0 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.1.0  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.18-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "/usr/include/tirpc"]
+        ignore line: [ignoring duplicate directory "/usr/include/"]
+        ignore line: [ignoring duplicate directory "/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/apps/codes/gcc-11.4.0/include"]
+        ignore line: [ignoring nonexistent directory "/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../x86_64-pc-linux-gnu/include"]
+        ignore line: [ignoring duplicate directory "/usr/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /apps/codes/gcc-11.4.0/include]
+        ignore line: [ /usr/include]
+        ignore line: [ /usr/local/include]
+        ignore line: [ /opt/local/petsc-3.15.2/include]
+        ignore line: [ /opt/local/slepc-3.15.2/include]
+        ignore line: [ /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include]
+        ignore line: [ /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/include-fixed]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (GCC) version 11.4.0 (x86_64-pc-linux-gnu)]
+        ignore line: [	compiled by GNU C version 11.4.0  GMP version 6.1.0  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.18-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [Compiler executable checksum: 116d3183087f7d079e76276a8d006776]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0d385.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0d385.dir/']
+        ignore line: [ as -v --64 -o CMakeFiles/cmTC_0d385.dir/CMakeCCompilerABI.c.o /tmp/ccp4un3P.s]
+        ignore line: [GNU assembler version 2.27 (x86_64-redhat-linux) using BFD version version 2.27-44.base.el7_9.1]
+        ignore line: [COMPILER_PATH=/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0d385.dir/CMakeCCompilerABI.c.o' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0d385.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_0d385]
+        ignore line: [/apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0d385.dir/link.txt --verbose=1]
+        ignore line: [/apps/codes/gcc-11.4.0/bin/gcc  -v CMakeFiles/cmTC_0d385.dir/CMakeCCompilerABI.c.o -o cmTC_0d385 ]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/apps/codes/gcc-11.4.0/bin/gcc]
+        ignore line: [COLLECT_LTO_WRAPPER=/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/lto-wrapper]
+        ignore line: [Target: x86_64-pc-linux-gnu]
+        ignore line: [Configured with: ./configure --disable-multilib --prefix=/apps/codes/gcc-11.4.0/]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 11.4.0 (GCC) ]
+        ignore line: [COMPILER_PATH=/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/]
+        ignore line: [LIBRARY_PATH=/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../:/lib/:/usr/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0d385' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0d385.']
+        link line: [ /apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/collect2 -plugin /apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/liblto_plugin.so -plugin-opt=/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccKoGmkT.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_0d385 /lib/../lib64/crt1.o /lib/../lib64/crti.o /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/crtbegin.o -L/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0 -L/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../.. CMakeFiles/cmTC_0d385.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/crtend.o /lib/../lib64/crtn.o]
+          arg [/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/collect2] ==> ignore
+          arg [-plugin] ==> ignore
+          arg [/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/liblto_plugin.so] ==> ignore
+          arg [-plugin-opt=/apps/codes/gcc-11.4.0/libexec/gcc/x86_64-pc-linux-gnu/11.4.0/lto-wrapper] ==> ignore
+          arg [-plugin-opt=-fresolution=/tmp/ccKoGmkT.res] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [-plugin-opt=-pass-through=-lc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+          arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+          arg [--eh-frame-hdr] ==> ignore
+          arg [-m] ==> ignore
+          arg [elf_x86_64] ==> ignore
+          arg [-dynamic-linker] ==> ignore
+          arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+          arg [-o] ==> ignore
+          arg [cmTC_0d385] ==> ignore
+          arg [/lib/../lib64/crt1.o] ==> obj [/lib/../lib64/crt1.o]
+          arg [/lib/../lib64/crti.o] ==> obj [/lib/../lib64/crti.o]
+          arg [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/crtbegin.o] ==> obj [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/crtbegin.o]
+          arg [-L/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0] ==> dir [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0]
+          arg [-L/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../lib64] ==> dir [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../lib64]
+          arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+          arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+          arg [-L/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../..] ==> dir [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../..]
+          arg [CMakeFiles/cmTC_0d385.dir/CMakeCCompilerABI.c.o] ==> ignore
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+          arg [-lc] ==> lib [c]
+          arg [-lgcc] ==> lib [gcc]
+          arg [--as-needed] ==> ignore
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [--no-as-needed] ==> ignore
+          arg [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/crtend.o] ==> obj [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/crtend.o]
+          arg [/lib/../lib64/crtn.o] ==> obj [/lib/../lib64/crtn.o]
+        collapse obj [/lib/../lib64/crt1.o] ==> [/lib64/crt1.o]
+        collapse obj [/lib/../lib64/crti.o] ==> [/lib64/crti.o]
+        collapse obj [/lib/../lib64/crtn.o] ==> [/lib64/crtn.o]
+        collapse library dir [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0] ==> [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0]
+        collapse library dir [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../../../lib64] ==> [/apps/codes/gcc-11.4.0/lib64]
+        collapse library dir [/lib/../lib64] ==> [/lib64]
+        collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+        collapse library dir [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/../../..] ==> [/apps/codes/gcc-11.4.0/lib]
+        implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+        implicit objs: [/lib64/crt1.o;/lib64/crti.o;/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/crtbegin.o;/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0/crtend.o;/lib64/crtn.o]
+        implicit dirs: [/apps/codes/gcc-11.4.0/lib/gcc/x86_64-pc-linux-gnu/11.4.0;/apps/codes/gcc-11.4.0/lib64;/lib64;/usr/lib64;/apps/codes/gcc-11.4.0/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CheckCXXCompilerFlag.cmake:40 (cmake_check_compiler_flag)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/CheckCXXFeatures.cmake:129 (check_cxx_compiler_flag)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:105 (include)"
+      - "CMakeLists.txt:19 (dune_project)"
+    checks:
+      - "Performing Test cxx_std_flag_17"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-YbPDrP"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-YbPDrP"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "cxx_std_flag_17"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-YbPDrP
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9c227/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9c227.dir/build.make CMakeFiles/cmTC_9c227.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-YbPDrP'
+        Building CXX object CMakeFiles/cmTC_9c227.dir/src.cxx.o
+        /apps/codes/gcc-11.4.0/bin/g++ -Dcxx_std_flag_17  -fPIE   -std=c++17 -o CMakeFiles/cmTC_9c227.dir/src.cxx.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-YbPDrP/src.cxx
+        Linking CXX executable cmTC_9c227
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c227.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/g++ CMakeFiles/cmTC_9c227.dir/src.cxx.o -o cmTC_9c227 
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-YbPDrP'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CheckCXXSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/CheckCXXFeatures.cmake:146 (check_cxx_source_compiles)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:105 (include)"
+      - "CMakeLists.txt:19 (dune_project)"
+    checks:
+      - "Performing Test compiler_supports_cxx17"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-QCpI5l"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-QCpI5l"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "compiler_supports_cxx17"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-QCpI5l
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9afd2/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9afd2.dir/build.make CMakeFiles/cmTC_9afd2.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-QCpI5l'
+        Building CXX object CMakeFiles/cmTC_9afd2.dir/src.cxx.o
+        /apps/codes/gcc-11.4.0/bin/g++ -Dcompiler_supports_cxx17  -std=c++17 -fPIE -o CMakeFiles/cmTC_9afd2.dir/src.cxx.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-QCpI5l/src.cxx
+        Linking CXX executable cmTC_9afd2
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9afd2.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/g++   -std=c++17 CMakeFiles/cmTC_9afd2.dir/src.cxx.o -o cmTC_9afd2 
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-QCpI5l'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CheckSymbolExists.cmake:145 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CheckCXXSymbolExists.cmake:77 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/CheckCXXFeatures.cmake:197 (check_cxx_symbol_exists)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:105 (include)"
+      - "CMakeLists.txt:19 (dune_project)"
+    checks:
+      - "Looking for std::experimental::make_array<int,int>"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-eSKU2S"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-eSKU2S"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-std=c++17 "
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "DUNE_HAVE_CXX_EXPERIMENTAL_MAKE_ARRAY"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-eSKU2S
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_aba97/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_aba97.dir/build.make CMakeFiles/cmTC_aba97.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-eSKU2S'
+        Building CXX object CMakeFiles/cmTC_aba97.dir/CheckSymbolExists.cxx.o
+        /apps/codes/gcc-11.4.0/bin/g++   -std=c++17   -fPIE -o CMakeFiles/cmTC_aba97.dir/CheckSymbolExists.cxx.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-eSKU2S/CheckSymbolExists.cxx
+        Linking CXX executable cmTC_aba97
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aba97.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/g++ -std=c++17   CMakeFiles/cmTC_aba97.dir/CheckSymbolExists.cxx.o -o cmTC_aba97 
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-eSKU2S'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CheckSymbolExists.cmake:145 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CheckCXXSymbolExists.cmake:77 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/CheckCXXFeatures.cmake:203 (check_cxx_symbol_exists)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:105 (include)"
+      - "CMakeLists.txt:19 (dune_project)"
+    checks:
+      - "Looking for std::move<std::experimental::detected_t<std::decay_t,int>>"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-iXigpq"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-iXigpq"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-std=c++17 "
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "DUNE_HAVE_CXX_EXPERIMENTAL_IS_DETECTED"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-iXigpq
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_1909c/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_1909c.dir/build.make CMakeFiles/cmTC_1909c.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-iXigpq'
+        Building CXX object CMakeFiles/cmTC_1909c.dir/CheckSymbolExists.cxx.o
+        /apps/codes/gcc-11.4.0/bin/g++   -std=c++17   -fPIE -o CMakeFiles/cmTC_1909c.dir/CheckSymbolExists.cxx.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-iXigpq/CheckSymbolExists.cxx
+        Linking CXX executable cmTC_1909c
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1909c.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/g++ -std=c++17   CMakeFiles/cmTC_1909c.dir/CheckSymbolExists.cxx.o -o cmTC_1909c 
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-iXigpq'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CheckSymbolExists.cmake:145 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CheckCXXSymbolExists.cmake:77 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/CheckCXXFeatures.cmake:209 (check_cxx_symbol_exists)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:105 (include)"
+      - "CMakeLists.txt:19 (dune_project)"
+    checks:
+      - "Looking for std::identity"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-OYdL9X"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-OYdL9X"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-std=c++17 "
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "DUNE_HAVE_CXX_STD_IDENTITY"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-OYdL9X
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_ae8c7/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_ae8c7.dir/build.make CMakeFiles/cmTC_ae8c7.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-OYdL9X'
+        Building CXX object CMakeFiles/cmTC_ae8c7.dir/CheckSymbolExists.cxx.o
+        /apps/codes/gcc-11.4.0/bin/g++   -std=c++17   -fPIE -o CMakeFiles/cmTC_ae8c7.dir/CheckSymbolExists.cxx.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-OYdL9X/CheckSymbolExists.cxx
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-OYdL9X/CheckSymbolExists.cxx: In function ‘int main(int, char**)’:
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-OYdL9X/CheckSymbolExists.cxx:7:24: error: ‘identity’ is not a member of ‘std’
+            7 |   return ((int*)(&std::identity))[argc];
+              |                        ^~~~~~~~
+        gmake[1]: *** [CMakeFiles/cmTC_ae8c7.dir/CheckSymbolExists.cxx.o] Error 1
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-OYdL9X'
+        gmake: *** [cmTC_ae8c7/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CheckCXXSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/CheckCXXFeatures.cmake:216 (check_cxx_source_compiles)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:105 (include)"
+      - "CMakeLists.txt:19 (dune_project)"
+    checks:
+      - "Performing Test DUNE_HAVE_CXX_UNEVALUATED_CONTEXT_LAMBDA"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-uyETzw"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-uyETzw"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-std=c++17 "
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "DUNE_HAVE_CXX_UNEVALUATED_CONTEXT_LAMBDA"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-uyETzw
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_a91e9/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_a91e9.dir/build.make CMakeFiles/cmTC_a91e9.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-uyETzw'
+        Building CXX object CMakeFiles/cmTC_a91e9.dir/src.cxx.o
+        /apps/codes/gcc-11.4.0/bin/g++ -DDUNE_HAVE_CXX_UNEVALUATED_CONTEXT_LAMBDA  -std=c++17   -fPIE -o CMakeFiles/cmTC_a91e9.dir/src.cxx.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-uyETzw/src.cxx
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-uyETzw/src.cxx:1:20: error: lambda-expression in unevaluated context only available with ‘-std=c++20’ or ‘-std=gnu++20’
+            1 | using F = decltype([](){}); int main() {return 0;}
+              |                    ^
+        gmake[1]: *** [CMakeFiles/cmTC_a91e9.dir/src.cxx.o] Error 1
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-uyETzw'
+        gmake: *** [cmTC_a91e9/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/AddBLASLapackFlags.cmake:34 (check_function_exists)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneCommonMacros.cmake:12 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneModuleDependencies.cmake:112 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:123 (dune_process_dependency_macros)"
+      - "CMakeLists.txt:19 (dune_project)"
+    checks:
+      - "Looking for dsyev_"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-GrdMd5"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-GrdMd5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "LAPACK_NEEDS_UNDERLINE"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-GrdMd5
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0101f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_0101f.dir/build.make CMakeFiles/cmTC_0101f.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-GrdMd5'
+        Building C object CMakeFiles/cmTC_0101f.dir/CheckFunctionExists.c.o
+        /apps/codes/gcc-11.4.0/bin/gcc   -DCHECK_FUNCTION_EXISTS=dsyev_ -fPIE -o CMakeFiles/cmTC_0101f.dir/CheckFunctionExists.c.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-GrdMd5/CheckFunctionExists.c
+        Linking C executable cmTC_0101f
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0101f.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/gcc  -DCHECK_FUNCTION_EXISTS=dsyev_ CMakeFiles/cmTC_0101f.dir/CheckFunctionExists.c.o -o cmTC_0101f  /usr/lib64/liblapack.so.3 
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-GrdMd5'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CheckCXXSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/FindQuadMath.cmake:46 (check_cxx_source_compiles)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneCommonMacros.cmake:16 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneModuleDependencies.cmake:112 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:123 (dune_process_dependency_macros)"
+      - "CMakeLists.txt:19 (dune_project)"
+    checks:
+      - "Performing Test QuadMath_COMPILES"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-uC1p8D"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-uC1p8D"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-std=c++17 "
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "QuadMath_COMPILES"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-uC1p8D
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_13024/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_13024.dir/build.make CMakeFiles/cmTC_13024.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-uC1p8D'
+        Building CXX object CMakeFiles/cmTC_13024.dir/src.cxx.o
+        /apps/codes/gcc-11.4.0/bin/g++ -DQuadMath_COMPILES  -std=c++17  -fext-numeric-literals -fPIE -o CMakeFiles/cmTC_13024.dir/src.cxx.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-uC1p8D/src.cxx
+        Linking CXX executable cmTC_13024
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_13024.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/g++ -std=c++17  -fext-numeric-literals CMakeFiles/cmTC_13024.dir/src.cxx.o -o cmTC_13024  -lquadmath 
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-uC1p8D'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindThreads.cmake:97 (CHECK_C_SOURCE_COMPILES)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneCommonMacros.cmake:24 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneModuleDependencies.cmake:112 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:123 (dune_process_dependency_macros)"
+      - "CMakeLists.txt:19 (dune_project)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-GEYzld"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-GEYzld"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-GEYzld
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_53f93/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_53f93.dir/build.make CMakeFiles/cmTC_53f93.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-GEYzld'
+        Building C object CMakeFiles/cmTC_53f93.dir/src.c.o
+        /apps/codes/gcc-11.4.0/bin/gcc -DCMAKE_HAVE_LIBC_PTHREAD  -fPIE -o CMakeFiles/cmTC_53f93.dir/src.c.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-GEYzld/src.c
+        Linking C executable cmTC_53f93
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53f93.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/gcc CMakeFiles/cmTC_53f93.dir/src.c.o -o cmTC_53f93 
+        CMakeFiles/cmTC_53f93.dir/src.c.o: In function `main':
+        src.c:(.text+0x2f): undefined reference to `pthread_create'
+        src.c:(.text+0x3b): undefined reference to `pthread_detach'
+        src.c:(.text+0x47): undefined reference to `pthread_cancel'
+        src.c:(.text+0x58): undefined reference to `pthread_join'
+        src.c:(.text+0x6c): undefined reference to `pthread_atfork'
+        collect2: error: ld returned 1 exit status
+        gmake[1]: *** [cmTC_53f93] Error 1
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-GEYzld'
+        gmake: *** [cmTC_53f93/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindThreads.cmake:136 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindThreads.cmake:169 (_threads_check_flag_pthread)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneCommonMacros.cmake:24 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneModuleDependencies.cmake:112 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:123 (dune_process_dependency_macros)"
+      - "CMakeLists.txt:19 (dune_project)"
+    checks:
+      - "Check if compiler accepts -pthread"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-aURpLM"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-aURpLM"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "THREADS_HAVE_PTHREAD_ARG"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-aURpLM
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_48fed/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_48fed.dir/build.make CMakeFiles/cmTC_48fed.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-aURpLM'
+        Building C object CMakeFiles/cmTC_48fed.dir/CheckForPthreads.c.o
+        /apps/codes/gcc-11.4.0/bin/gcc   -fPIE -o CMakeFiles/cmTC_48fed.dir/CheckForPthreads.c.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-aURpLM/CheckForPthreads.c
+        Linking C executable cmTC_48fed
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_48fed.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/gcc CMakeFiles/cmTC_48fed.dir/CheckForPthreads.c.o -o cmTC_48fed  -pthread 
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-aURpLM'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneCommonMacros.cmake:28 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneModuleDependencies.cmake:112 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:123 (dune_process_dependency_macros)"
+      - "CMakeLists.txt:19 (dune_project)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-qadueW"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-qadueW"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-qadueW
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9feaf/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_9feaf.dir/build.make CMakeFiles/cmTC_9feaf.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-qadueW'
+        Building C object CMakeFiles/cmTC_9feaf.dir/test_mpi.c.o
+        /apps/codes/gcc-11.4.0/bin/gcc  -isystem /opt/local/petsc-3.15.2/arch-linux-cxx-debug/include -fPIE -o CMakeFiles/cmTC_9feaf.dir/test_mpi.c.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-qadueW/test_mpi.c
+        Linking C executable cmTC_9feaf
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9feaf.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/gcc -Wl,-rpath -Wl,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_9feaf.dir/test_mpi.c.o -o cmTC_9feaf  -Wl,-rpath,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libmpi.so 
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-qadueW'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/FindPTScotch.cmake:83 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneCommonMacros.cmake:36 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneModuleDependencies.cmake:112 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:123 (dune_process_dependency_macros)"
+      - "CMakeLists.txt:19 (dune_project)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-S0Hp66"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-S0Hp66"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-std=c++17 "
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-S0Hp66
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_48105/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_48105.dir/build.make CMakeFiles/cmTC_48105.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-S0Hp66'
+        Building CXX object CMakeFiles/cmTC_48105.dir/test_mpi.cpp.o
+        /apps/codes/gcc-11.4.0/bin/g++   -std=c++17   -fPIE -o CMakeFiles/cmTC_48105.dir/test_mpi.cpp.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-S0Hp66/test_mpi.cpp
+        Linking CXX executable cmTC_48105
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_48105.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/g++ -std=c++17   -Wl,-rpath -Wl,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_48105.dir/test_mpi.cpp.o -o cmTC_48105  -Wl,-rpath,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libmpicxx.so /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libmpi.so 
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-S0Hp66'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/FindPTScotch.cmake:83 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneCommonMacros.cmake:36 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneModuleDependencies.cmake:112 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:123 (dune_process_dependency_macros)"
+      - "CMakeLists.txt:19 (dune_project)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-u9FFiI"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-u9FFiI"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-std=c++17 "
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-u9FFiI
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b3f28/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b3f28.dir/build.make CMakeFiles/cmTC_b3f28.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-u9FFiI'
+        Building CXX object CMakeFiles/cmTC_b3f28.dir/test_mpi.cpp.o
+        /apps/codes/gcc-11.4.0/bin/g++   -std=c++17   -fPIE -o CMakeFiles/cmTC_b3f28.dir/test_mpi.cpp.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-u9FFiI/test_mpi.cpp
+        Linking CXX executable cmTC_b3f28
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3f28.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/g++ -std=c++17   -Wl,-rpath -Wl,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_b3f28.dir/test_mpi.cpp.o -o cmTC_b3f28  -Wl,-rpath,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libmpicxx.so /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libmpi.so 
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-u9FFiI'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CheckFunctionExists.cmake:91 (try_compile)"
+      - "/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules/DuneGridMacros.cmake:10 (check_function_exists)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneModuleDependencies.cmake:112 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:123 (dune_process_dependency_macros)"
+      - "CMakeLists.txt:19 (dune_project)"
+    checks:
+      - "Looking for mkstemp"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-AiSBbo"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-AiSBbo"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAVE_MKSTEMP"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-AiSBbo
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_37f7f/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_37f7f.dir/build.make CMakeFiles/cmTC_37f7f.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-AiSBbo'
+        Building C object CMakeFiles/cmTC_37f7f.dir/CheckFunctionExists.c.o
+        /apps/codes/gcc-11.4.0/bin/gcc   -DCHECK_FUNCTION_EXISTS=mkstemp -fPIE -o CMakeFiles/cmTC_37f7f.dir/CheckFunctionExists.c.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-AiSBbo/CheckFunctionExists.c
+        Linking C executable cmTC_37f7f
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_37f7f.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/gcc  -DCHECK_FUNCTION_EXISTS=mkstemp CMakeFiles/cmTC_37f7f.dir/CheckFunctionExists.c.o -o cmTC_37f7f 
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-AiSBbo'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CheckIncludeFiles.cmake:137 (try_compile)"
+      - "/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules/FindSIONlib.cmake:46 (check_include_files)"
+      - "/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules/DuneAlugridMacros.cmake:57 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneModuleDependencies.cmake:112 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:123 (dune_process_dependency_macros)"
+      - "CMakeLists.txt:19 (dune_project)"
+    checks:
+      - "Looking for include file sion.h"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-0WibC4"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-0WibC4"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "SIONLIB_HEADER_USABLE"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-0WibC4
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_b33fa/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_b33fa.dir/build.make CMakeFiles/cmTC_b33fa.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-0WibC4'
+        Building C object CMakeFiles/cmTC_b33fa.dir/SIONLIB_HEADER_USABLE.c.o
+        /apps/codes/gcc-11.4.0/bin/gcc   -fPIE     -DENABLE_SIONLIB -o CMakeFiles/cmTC_b33fa.dir/SIONLIB_HEADER_USABLE.c.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-0WibC4/SIONLIB_HEADER_USABLE.c
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-0WibC4/SIONLIB_HEADER_USABLE.c:2:10: fatal error: sion.h: No such file or directory
+            2 | #include <sion.h>
+              |          ^~~~~~~~
+        compilation terminated.
+        gmake[1]: *** [CMakeFiles/cmTC_b33fa.dir/SIONLIB_HEADER_USABLE.c.o] Error 1
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-0WibC4'
+        gmake: *** [cmTC_b33fa/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/CheckCXXSourceCompiles.cmake:76 (cmake_check_source_compiles)"
+      - "/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules/FindPThreads.cmake:24 (check_cxx_source_compiles)"
+      - "/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules/DuneAlugridMacros.cmake:73 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneModuleDependencies.cmake:112 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:123 (dune_process_dependency_macros)"
+      - "CMakeLists.txt:19 (dune_project)"
+    checks:
+      - "Performing Test DUNE_CV_PTHREAD_TLS_COMPILES"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-std=c++17 "
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "DUNE_CV_PTHREAD_TLS_COMPILES"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_449fb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_449fb.dir/build.make CMakeFiles/cmTC_449fb.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL'
+        Building CXX object CMakeFiles/cmTC_449fb.dir/src.cxx.o
+        /apps/codes/gcc-11.4.0/bin/g++ -DDUNE_CV_PTHREAD_TLS_COMPILES  -std=c++17    -fPIE -o CMakeFiles/cmTC_449fb.dir/src.cxx.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx:1:1: error: ‘include’ does not name a type
+            1 | include <pthread.h>
+              | ^~~~~~~
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx:7:42: error: ‘maxThreads’ was not declared in this scope
+            7 |                 static int threadnumber[ maxThreads ];
+              |                                          ^~~~~~~~~~
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx:8:17: error: ‘pthread_barrier_t’ does not name a type
+            8 |                 pthread_barrier_t barrier;
+              |                 ^~~~~~~~~~~~~~~~~
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx: In function ‘void* setThreadNumber(void*)’:
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx:13:19: error: ‘threadnumber’ was not declared in this scope; did you mean ‘threadNumber’?
+           13 |                   threadnumber[ num ] = threadNumber ();
+              |                   ^~~~~~~~~~~~
+              |                   threadNumber
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx:14:42: error: ‘barrier’ was not declared in this scope
+           14 |                   pthread_barrier_wait( &barrier );
+              |                                          ^~~~~~~
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx:14:19: error: ‘pthread_barrier_wait’ was not declared in this scope
+           14 |                   pthread_barrier_wait( &barrier );
+              |                   ^~~~~~~~~~~~~~~~~~~~
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx: In function ‘int main()’:
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx:18:19: error: ‘pthread_t’ was not declared in this scope
+           18 |                   pthread_t thread[ maxThreads ];
+              |                   ^~~~~~~~~
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx:19:28: error: ‘maxThreads’ was not declared in this scope
+           19 |                   int num[ maxThreads ];
+              |                            ^~~~~~~~~~
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx:22:21: error: ‘num’ was not declared in this scope; did you mean ‘enum’?
+           22 |                     num[ i ] = i;
+              |                     ^~~
+              |                     enum
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx:23:21: error: ‘threadnumber’ was not declared in this scope; did you mean ‘threadNumber’?
+           23 |                     threadnumber[ i ] = -1;
+              |                     ^~~~~~~~~~~~
+              |                     threadNumber
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx:25:42: error: ‘barrier’ was not declared in this scope
+           25 |                   pthread_barrier_init( &barrier, 0, maxThreads );
+              |                                          ^~~~~~~
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx:25:19: error: ‘pthread_barrier_init’ was not declared in this scope
+           25 |                   pthread_barrier_init( &barrier, 0, maxThreads );
+              |                   ^~~~~~~~~~~~~~~~~~~~
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx:27:38: error: ‘thread’ was not declared in this scope
+           27 |                     pthread_create (&thread[ i ], 0, &setThreadNumber, (void *) &num[ i ]);
+              |                                      ^~~~~~
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx:27:82: error: ‘num’ was not declared in this scope; did you mean ‘enum’?
+           27 |                     pthread_create (&thread[ i ], 0, &setThreadNumber, (void *) &num[ i ]);
+              |                                                                                  ^~~
+              |                                                                                  enum
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx:27:21: error: ‘pthread_create’ was not declared in this scope
+           27 |                     pthread_create (&thread[ i ], 0, &setThreadNumber, (void *) &num[ i ]);
+              |                     ^~~~~~~~~~~~~~
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx:30:35: error: ‘thread’ was not declared in this scope
+           30 |                     pthread_join (thread[ i ], 0);
+              |                                   ^~~~~~
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx:30:21: error: ‘pthread_join’ was not declared in this scope
+           30 |                     pthread_join (thread[ i ], 0);
+              |                     ^~~~~~~~~~~~
+        /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL/src.cxx:33:25: error: ‘threadnumber’ was not declared in this scope; did you mean ‘threadNumber’?
+           33 |                     if( threadnumber[ i ] != i ) result = 1;
+              |                         ^~~~~~~~~~~~
+              |                         threadNumber
+        gmake[1]: *** [CMakeFiles/cmTC_449fb.dir/src.cxx.o] Error 1
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-I0DKdL'
+        gmake: *** [cmTC_449fb/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneCommonMacros.cmake:28 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneModuleDependencies.cmake:112 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:123 (dune_process_dependency_macros)"
+      - "CMakeLists.txt:19 (dune_project)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-JKBEIG"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-JKBEIG"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-JKBEIG
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_642d1/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_642d1.dir/build.make CMakeFiles/cmTC_642d1.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-JKBEIG'
+        Building C object CMakeFiles/cmTC_642d1.dir/test_mpi.c.o
+        /apps/codes/gcc-11.4.0/bin/gcc  -isystem /opt/local/petsc-3.15.2/arch-linux-cxx-debug/include -fPIE -o CMakeFiles/cmTC_642d1.dir/test_mpi.c.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-JKBEIG/test_mpi.c
+        Linking C executable cmTC_642d1
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_642d1.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/gcc -Wl,-rpath -Wl,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_642d1.dir/test_mpi.c.o -o cmTC_642d1  -Wl,-rpath,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libmpi.so 
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-JKBEIG'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/FindPTScotch.cmake:83 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneCommonMacros.cmake:36 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneModuleDependencies.cmake:112 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:123 (dune_process_dependency_macros)"
+      - "CMakeLists.txt:19 (dune_project)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-P8FWOP"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-P8FWOP"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-std=c++17 "
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-P8FWOP
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_48e23/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_48e23.dir/build.make CMakeFiles/cmTC_48e23.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-P8FWOP'
+        Building CXX object CMakeFiles/cmTC_48e23.dir/test_mpi.cpp.o
+        /apps/codes/gcc-11.4.0/bin/g++   -std=c++17   -fPIE -o CMakeFiles/cmTC_48e23.dir/test_mpi.cpp.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-P8FWOP/test_mpi.cpp
+        Linking CXX executable cmTC_48e23
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_48e23.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/g++ -std=c++17   -Wl,-rpath -Wl,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_48e23.dir/test_mpi.cpp.o -o cmTC_48e23  -Wl,-rpath,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libmpicxx.so /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libmpi.so 
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-P8FWOP'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/FindPTScotch.cmake:83 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneCommonMacros.cmake:36 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneModuleDependencies.cmake:112 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:123 (dune_process_dependency_macros)"
+      - "CMakeLists.txt:19 (dune_project)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-NYNHpZ"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-NYNHpZ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-std=c++17 "
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-NYNHpZ
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fddc4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_fddc4.dir/build.make CMakeFiles/cmTC_fddc4.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-NYNHpZ'
+        Building CXX object CMakeFiles/cmTC_fddc4.dir/test_mpi.cpp.o
+        /apps/codes/gcc-11.4.0/bin/g++   -std=c++17   -fPIE -o CMakeFiles/cmTC_fddc4.dir/test_mpi.cpp.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-NYNHpZ/test_mpi.cpp
+        Linking CXX executable cmTC_fddc4
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fddc4.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/g++ -std=c++17   -Wl,-rpath -Wl,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_fddc4.dir/test_mpi.cpp.o -o cmTC_fddc4  -Wl,-rpath,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libmpicxx.so /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libmpi.so 
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-NYNHpZ'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneCommonMacros.cmake:28 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneModuleDependencies.cmake:112 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:123 (dune_process_dependency_macros)"
+      - "CMakeLists.txt:20 (dune_project)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-1bfsYM"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-1bfsYM"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-1bfsYM
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d1340/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d1340.dir/build.make CMakeFiles/cmTC_d1340.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-1bfsYM'
+        Building C object CMakeFiles/cmTC_d1340.dir/test_mpi.c.o
+        /apps/codes/gcc-11.4.0/bin/gcc  -isystem /opt/local/petsc-3.15.2/arch-linux-cxx-debug/include -fPIE -o CMakeFiles/cmTC_d1340.dir/test_mpi.c.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-1bfsYM/test_mpi.c
+        Linking C executable cmTC_d1340
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d1340.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/gcc -Wl,-rpath -Wl,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_d1340.dir/test_mpi.c.o -o cmTC_d1340  -Wl,-rpath,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libmpi.so 
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-1bfsYM'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/FindPTScotch.cmake:83 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneCommonMacros.cmake:36 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneModuleDependencies.cmake:112 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:123 (dune_process_dependency_macros)"
+      - "CMakeLists.txt:20 (dune_project)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-3BYUn0"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-3BYUn0"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-std=c++17 /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libpetsc.so.3.15 /opt/local/slepc-3.15.2/arch-linux-cxx-debug/lib/libslepc.so.3.15"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-3BYUn0
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_34f0a/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_34f0a.dir/build.make CMakeFiles/cmTC_34f0a.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-3BYUn0'
+        Building CXX object CMakeFiles/cmTC_34f0a.dir/test_mpi.cpp.o
+        /apps/codes/gcc-11.4.0/bin/g++   -std=c++17 /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libpetsc.so.3.15 /opt/local/slepc-3.15.2/arch-linux-cxx-debug/lib/libslepc.so.3.15  -fPIE -o CMakeFiles/cmTC_34f0a.dir/test_mpi.cpp.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-3BYUn0/test_mpi.cpp
+        g++: warning: /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libpetsc.so.3.15: linker input file unused because linking not done
+        g++: warning: /opt/local/slepc-3.15.2/arch-linux-cxx-debug/lib/libslepc.so.3.15: linker input file unused because linking not done
+        Linking CXX executable cmTC_34f0a
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34f0a.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/g++ -std=c++17 /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libpetsc.so.3.15 /opt/local/slepc-3.15.2/arch-linux-cxx-debug/lib/libslepc.so.3.15  -Wl,-rpath -Wl,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_34f0a.dir/test_mpi.cpp.o -o cmTC_34f0a  -Wl,-rpath,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libmpicxx.so /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libmpi.so 
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-3BYUn0'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/FindPTScotch.cmake:83 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneCommonMacros.cmake:36 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneModuleDependencies.cmake:112 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:123 (dune_process_dependency_macros)"
+      - "CMakeLists.txt:20 (dune_project)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-PjiCne"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-PjiCne"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-std=c++17 /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libpetsc.so.3.15 /opt/local/slepc-3.15.2/arch-linux-cxx-debug/lib/libslepc.so.3.15"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-PjiCne
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_5eee4/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_5eee4.dir/build.make CMakeFiles/cmTC_5eee4.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-PjiCne'
+        Building CXX object CMakeFiles/cmTC_5eee4.dir/test_mpi.cpp.o
+        /apps/codes/gcc-11.4.0/bin/g++   -std=c++17 /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libpetsc.so.3.15 /opt/local/slepc-3.15.2/arch-linux-cxx-debug/lib/libslepc.so.3.15  -fPIE -o CMakeFiles/cmTC_5eee4.dir/test_mpi.cpp.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-PjiCne/test_mpi.cpp
+        g++: warning: /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libpetsc.so.3.15: linker input file unused because linking not done
+        g++: warning: /opt/local/slepc-3.15.2/arch-linux-cxx-debug/lib/libslepc.so.3.15: linker input file unused because linking not done
+        Linking CXX executable cmTC_5eee4
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5eee4.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/g++ -std=c++17 /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libpetsc.so.3.15 /opt/local/slepc-3.15.2/arch-linux-cxx-debug/lib/libslepc.so.3.15  -Wl,-rpath -Wl,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_5eee4.dir/test_mpi.cpp.o -o cmTC_5eee4  -Wl,-rpath,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libmpicxx.so /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libmpi.so 
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-PjiCne'
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneCommonMacros.cmake:28 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneModuleDependencies.cmake:112 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:123 (dune_process_dependency_macros)"
+      - "CMakeLists.txt:20 (dune_project)"
+    description: "The MPI test test_mpi for C in mode normal"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-vh2raD"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-vh2raD"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "MPI_RESULT_C_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-vh2raD
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_d26cb/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_d26cb.dir/build.make CMakeFiles/cmTC_d26cb.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-vh2raD'
+        Building C object CMakeFiles/cmTC_d26cb.dir/test_mpi.c.o
+        /apps/codes/gcc-11.4.0/bin/gcc  -isystem /opt/local/petsc-3.15.2/arch-linux-cxx-debug/include -fPIE -o CMakeFiles/cmTC_d26cb.dir/test_mpi.c.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-vh2raD/test_mpi.c
+        Linking C executable cmTC_d26cb
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d26cb.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/gcc -Wl,-rpath -Wl,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_d26cb.dir/test_mpi.c.o -o cmTC_d26cb  -Wl,-rpath,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libmpi.so 
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-vh2raD'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1322 (_MPI_try_staged_settings)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1645 (_MPI_check_lang_works)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/FindPTScotch.cmake:83 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneCommonMacros.cmake:36 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneModuleDependencies.cmake:112 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:123 (dune_process_dependency_macros)"
+      - "CMakeLists.txt:20 (dune_project)"
+    description: "The MPI test test_mpi for CXX in mode normal"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-YylcSH"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-YylcSH"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-std=c++17 /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libpetsc.so.3.15 /opt/local/slepc-3.15.2/arch-linux-cxx-debug/lib/libslepc.so.3.15"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_normal"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-YylcSH
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_c4842/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_c4842.dir/build.make CMakeFiles/cmTC_c4842.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-YylcSH'
+        Building CXX object CMakeFiles/cmTC_c4842.dir/test_mpi.cpp.o
+        /apps/codes/gcc-11.4.0/bin/g++   -std=c++17 /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libpetsc.so.3.15 /opt/local/slepc-3.15.2/arch-linux-cxx-debug/lib/libslepc.so.3.15  -fPIE -o CMakeFiles/cmTC_c4842.dir/test_mpi.cpp.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-YylcSH/test_mpi.cpp
+        g++: warning: /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libpetsc.so.3.15: linker input file unused because linking not done
+        g++: warning: /opt/local/slepc-3.15.2/arch-linux-cxx-debug/lib/libslepc.so.3.15: linker input file unused because linking not done
+        Linking CXX executable cmTC_c4842
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4842.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/g++ -std=c++17 /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libpetsc.so.3.15 /opt/local/slepc-3.15.2/arch-linux-cxx-debug/lib/libslepc.so.3.15  -Wl,-rpath -Wl,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_c4842.dir/test_mpi.cpp.o -o cmTC_c4842  -Wl,-rpath,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libmpicxx.so /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libmpi.so 
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-YylcSH'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1278 (try_compile)"
+      - "/apps/codes/cmake-3.26/share/cmake-3.26/Modules/FindMPI.cmake:1672 (_MPI_try_staged_settings)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/FindPTScotch.cmake:83 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneCommonMacros.cmake:36 (find_package)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneModuleDependencies.cmake:112 (include)"
+      - "/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules/DuneProject.cmake:123 (dune_process_dependency_macros)"
+      - "CMakeLists.txt:20 (dune_project)"
+    description: "The MPI test test_mpi for CXX in mode MPICXX"
+    directories:
+      source: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-jqSS9M"
+      binary: "/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-jqSS9M"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-std=c++17 /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libpetsc.so.3.15 /opt/local/slepc-3.15.2/arch-linux-cxx-debug/lib/libslepc.so.3.15"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/home/athira/dune-projects/dune-p3d/cmake/modules;/opt/local/dune_210/dune-localfunctions-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-howto-master/cmake/modules;/opt/local/dune_210/dune-gmsh4-master/cmake/modules;/opt/local/dune_210/dune-alugrid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-istl-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-grid-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-geometry-2.10.dev20221009/cmake/modules;/opt/local/dune_210/dune-common-2.10.dev20221009/cmake/modules"
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "MPI_RESULT_CXX_test_mpi_MPICXX"
+      cached: true
+      stdout: |
+        Change Dir: /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-jqSS9M
+        
+        Run Build Command(s):/apps/codes/cmake-3.26/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_7b1c3/fast && /usr/bin/gmake  -f CMakeFiles/cmTC_7b1c3.dir/build.make CMakeFiles/cmTC_7b1c3.dir/build
+        gmake[1]: Entering directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-jqSS9M'
+        Building CXX object CMakeFiles/cmTC_7b1c3.dir/test_mpi.cpp.o
+        /apps/codes/gcc-11.4.0/bin/g++   -std=c++17 /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libpetsc.so.3.15 /opt/local/slepc-3.15.2/arch-linux-cxx-debug/lib/libslepc.so.3.15  -fPIE -o CMakeFiles/cmTC_7b1c3.dir/test_mpi.cpp.o -c /home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-jqSS9M/test_mpi.cpp
+        g++: warning: /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libpetsc.so.3.15: linker input file unused because linking not done
+        g++: warning: /opt/local/slepc-3.15.2/arch-linux-cxx-debug/lib/libslepc.so.3.15: linker input file unused because linking not done
+        Linking CXX executable cmTC_7b1c3
+        /apps/codes/cmake-3.26/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7b1c3.dir/link.txt --verbose=1
+        /apps/codes/gcc-11.4.0/bin/g++ -std=c++17 /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libpetsc.so.3.15 /opt/local/slepc-3.15.2/arch-linux-cxx-debug/lib/libslepc.so.3.15  -Wl,-rpath -Wl,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib -Wl,--enable-new-dtags CMakeFiles/cmTC_7b1c3.dir/test_mpi.cpp.o -o cmTC_7b1c3  -Wl,-rpath,/opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libmpicxx.so /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libmpi.so 
+        gmake[1]: Leaving directory `/home/athira/dune-projects/dune-p3d/build-cmake/CMakeFiles/CMakeScratch/TryCompile-jqSS9M'
+        
+      exitCode: 0
+...

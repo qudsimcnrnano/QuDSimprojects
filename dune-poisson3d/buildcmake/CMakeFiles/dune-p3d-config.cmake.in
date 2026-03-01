@@ -1,0 +1,34 @@
+if(NOT dune-p3d_FOUND)
+# Whether this module is installed or not
+set(dune-p3d_INSTALLED @MODULE_INSTALLED@)
+
+# Settings specific to the module
+@dune-p3d_INIT@
+# Package initialization
+@PACKAGE_INIT@
+
+#report other information
+set_and_check(dune-p3d_PREFIX "${PACKAGE_PREFIX_DIR}")
+set_and_check(dune-p3d_INCLUDE_DIRS "@PACKAGE_CMAKE_INSTALL_INCLUDEDIR@")
+set(dune-p3d_CXX_FLAGS "-std=c++17 /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libpetsc.so.3.15 /opt/local/slepc-3.15.2/arch-linux-cxx-debug/lib/libslepc.so.3.15")
+set(dune-p3d_CXX_FLAGS_DEBUG "-g")
+set(dune-p3d_CXX_FLAGS_MINSIZEREL "-Os -DNDEBUG")
+set(dune-p3d_CXX_FLAGS_RELEASE "-O3 -DNDEBUG")
+set(dune-p3d_CXX_FLAGS_RELWITHDEBINFO "-O2 -g -DNDEBUG")
+set(dune-p3d_DEPENDS "@dune-p3d_DEPENDS@")
+set(dune-p3d_SUGGESTS "@dune-p3d_SUGGESTS@")
+set(dune-p3d_MODULE_PATH "@PACKAGE_DUNE_INSTALL_MODULEDIR@")
+set(dune-p3d_LIBRARIES "@dune-p3d_LIBRARIES@")
+set(dune-p3d_HASPYTHON @DUNE_MODULE_HASPYTHON@)
+set(dune-p3d_PYTHONREQUIRES "@DUNE_MODULE_PYTHONREQUIRES@")
+
+# Lines that are set by the CMake build system via the variable DUNE_CUSTOM_PKG_CONFIG_SECTION
+
+
+#import the target
+if(dune-p3d_LIBRARIES)
+  get_filename_component(_dir "${CMAKE_CURRENT_LIST_FILE}" PATH)
+  include("${_dir}/dune-p3d-targets.cmake")
+endif()
+
+endif()
