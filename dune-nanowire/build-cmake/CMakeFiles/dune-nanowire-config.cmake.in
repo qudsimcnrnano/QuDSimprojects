@@ -1,0 +1,34 @@
+if(NOT dune-nanowire_FOUND)
+# Whether this module is installed or not
+set(dune-nanowire_INSTALLED @MODULE_INSTALLED@)
+
+# Settings specific to the module
+@dune-nanowire_INIT@
+# Package initialization
+@PACKAGE_INIT@
+
+#report other information
+set_and_check(dune-nanowire_PREFIX "${PACKAGE_PREFIX_DIR}")
+set_and_check(dune-nanowire_INCLUDE_DIRS "@PACKAGE_CMAKE_INSTALL_INCLUDEDIR@")
+set(dune-nanowire_CXX_FLAGS "-std=c++17 /opt/local/petsc-3.15.2/arch-linux-cxx-debug/lib/libpetsc.so.3.15 /opt/local/slepc-3.15.2/arch-linux-cxx-debug/lib/libslepc.so.3.15")
+set(dune-nanowire_CXX_FLAGS_DEBUG "-g")
+set(dune-nanowire_CXX_FLAGS_MINSIZEREL "-Os -DNDEBUG")
+set(dune-nanowire_CXX_FLAGS_RELEASE "-O3 -DNDEBUG")
+set(dune-nanowire_CXX_FLAGS_RELWITHDEBINFO "-O2 -g -DNDEBUG")
+set(dune-nanowire_DEPENDS "@dune-nanowire_DEPENDS@")
+set(dune-nanowire_SUGGESTS "@dune-nanowire_SUGGESTS@")
+set(dune-nanowire_MODULE_PATH "@PACKAGE_DUNE_INSTALL_MODULEDIR@")
+set(dune-nanowire_LIBRARIES "@dune-nanowire_LIBRARIES@")
+set(dune-nanowire_HASPYTHON @DUNE_MODULE_HASPYTHON@)
+set(dune-nanowire_PYTHONREQUIRES "@DUNE_MODULE_PYTHONREQUIRES@")
+
+# Lines that are set by the CMake build system via the variable DUNE_CUSTOM_PKG_CONFIG_SECTION
+
+
+#import the target
+if(dune-nanowire_LIBRARIES)
+  get_filename_component(_dir "${CMAKE_CURRENT_LIST_FILE}" PATH)
+  include("${_dir}/dune-nanowire-targets.cmake")
+endif()
+
+endif()
