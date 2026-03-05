@@ -1,8 +1,5 @@
 # =============================================================================
 # Material Parameters for GAA Nanowire FET Simulator
-# Source: Mahajan et al., "Modeling and Finite Element Simulation of Gate
-#         Leakage in Cylindrical GAA Nanowire FETs", IEEE 2017
-#         Tables I and II
 # =============================================================================
 #
 # FORMAT: Each line is a key-value pair, read by the .cc code
