@@ -1,0 +1,50 @@
+# =============================================================================
+# flash_mat_para.dat
+# Flash Memory High-K Device Material Parameters
+# Read by dune_highk_parallel.cc (rank 0 reads, MPI_Bcast to all)
+# =============================================================================
+#
+# --- Substrate (Silicon) ---
+Ns          2.5e15
+ni          1.5e10
+Eg          1.12
+eps_si      11.7
+Vfb         -0.88
+T           300
+#
+# --- SiO2 tunnel oxide (region 400) ---
+epsox       3.9
+Egox        9.0
+meox        0.5
+mhox        0.5
+delEc_sio2  3.16
+delEv_sio2  4.5
+#
+# --- HTO near nanocrystal (region 501) ---
+epshto      4.0
+Eghto       17.0
+mehto       0.4
+mhhto       0.4
+delEc_hto   2.8
+delEv_hto   5.0
+#
+# --- HfO2 charge trapping layer (region 502) ---
+epshfo2     20.0
+Eghfo2      5.68
+mehfo2      0.2
+mhhfo2      0.15
+delEc_hfo2  1.5
+delEv_hfo2  3.4
+#
+# --- Gate voltage ---
+Vgs         14.0
+#
+# --- Device geometry (nm) ---
+t_hto_gate  5.0
+t_hfo2      7.0
+t_hto_nc    3.0
+t_sio2      4.0
+t_si_trans  5.0
+t_si_chan   15.0
+t_si_bulk   11.0
+y_width     50.0

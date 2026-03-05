@@ -1,0 +1,48 @@
+# =============================================================================
+# Material Parameters for Flash Memory High-K Device Simulator
+# =============================================================================
+# Source: dune_highk.cc (serial code) + Mahajan et al. IEEE 2017 (Table II)
+#
+# Device: SONOS/TANOS-type Flash Memory with High-K dielectric stack
+# Structure (gate to substrate):
+#   Gate Metal
+#   |-- HTO  (region 503) -- blocking oxide near gate
+#   |-- HfO2 (region 502) -- charge trapping layer
+#   |-- HTO  (region 501) -- tunnel barrier near nanocrystal
+#   |-- SiO2 (region 400) -- tunnel oxide
+#   |-- Si   (region 200) -- substrate transition
+#   |-- Si   (region 201) -- channel
+#   |-- Si   (region 202) -- substrate bulk
+#   Substrate Contact
+#
+# =============================================================================
+#
+# SUBSTRATE: Silicon
+#   Eg        = 1.12 eV         (band gap)
+#   eps_r     = 11.7            (relative permittivity)
+#   Ns        = 2.5e15 cm^-3   (p-type doping concentration)
+#   ni        = 1.5e10 cm^-3   (intrinsic carrier concentration)
+#   Vfb       = -0.88 V        (flat band voltage)
+#   T         = 300 K           (simulation temperature)
+#
+# DIELECTRIC LAYERS:
+#   SiO2  (region 400):  eps_r = 3.9,   Eg = 9.0 eV,  me* = 0.5,  mh* = 0.5
+#   HTO   (region 501):  eps_r = 4.0,   Eg = 17.0 eV, me* = 0.4,  mh* = 0.4
+#   HfO2  (region 502):  eps_r = 20.0,  Eg = 5.68 eV, me* = 0.2,  mh* = 0.15
+#   HTO   (region 503):  eps_r = 4.0,   Eg = 17.0 eV, me* = 0.4,  mh* = 0.4
+#   Al2O3              :  eps_r = 9.0,   Eg = 6.4 eV   (not used in this stack)
+#   HfAlO              :  eps_r = 17.0                  (not used in this stack)
+#
+# ELECTRON BARRIER HEIGHTS (conduction band offset from Si):
+#   Si-SiO2  (400):  delEc = 3.16 eV
+#   Si-HTO   (501):  delEc = 2.8  eV
+#   Si-HfO2  (502):  delEc = 1.5  eV
+#   Si-HTO   (503):  delEc = 2.8  eV
+#
+# HOLE BARRIER HEIGHTS (valence band offset from Si):
+#   Si-SiO2  (400):  delEv = 4.5  eV
+#   Si-HTO   (501):  delEv = 5.0  eV
+#   Si-HfO2  (502):  delEv = 3.4  eV
+#   Si-HTO   (503):  delEv = 5.0  eV
+#
+# =============================================================================
