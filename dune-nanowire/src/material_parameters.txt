@@ -1,0 +1,116 @@
+# =============================================================================
+# Material Parameters for GAA Nanowire FET Simulator
+# Source: Mahajan et al., "Modeling and Finite Element Simulation of Gate
+#         Leakage in Cylindrical GAA Nanowire FETs", IEEE 2017
+#         Tables I and II
+# =============================================================================
+#
+# FORMAT: Each line is a key-value pair, read by the .cc code
+# Units: Eg in eV, ni in cm^-3, masses in m0, chi in eV, eps dimensionless
+#
+# =============================================================================
+# TABLE I: CHANNEL MATERIALS
+# =============================================================================
+#
+# Material   Eg(eV)  eps_r    ni(cm^-3)   chi_e(eV)  mq      mz      g
+# --------   ------  -----    ---------   ---------  ---     ---     ---
+#
+# Silicon (valley 1: Delta_4)
+# Si_v1:     1.12    11.8     1.45e10     4.0        0.43    0.19    4
+#
+# Silicon (valley 2: Delta_2)
+# Si_v2:     1.12    11.8     1.45e10     4.0        0.19    0.98    2
+#
+# In0.53Ga0.47As (single valley)
+# InGaAs:    0.74    13.9     6.4e11      4.5        0.04    0.04    1
+#
+# InAs (single valley)
+# InAs:      0.36    15.15    2e14        4.9        0.08    0.08    1
+#
+# GaN (single valley)
+# GaN:       3.2     8.9      2e-10       4.1        0.3     0.3     1
+#
+# =============================================================================
+# TABLE II: OXIDE MATERIALS
+# =============================================================================
+#
+# Material      Eg(eV)   eps_r    me*
+# --------      ------   -----    ---
+# SiO2:         9.0      3.9      0.5
+# HfO2:         5.9      25.0     0.2
+# Al2O3:        6.5      9.0      0.2
+#
+# =============================================================================
+# BAND OFFSETS (conduction band, from paper text)
+# =============================================================================
+#
+# In0.53Ga0.47As / Al2O3:  delEc = 3.1 eV
+# InAs / Al2O3:             delEc = 3.6 eV
+# GaN / Al2O3:              delEc = 2.16 eV
+# Si / SiO2:                delEc = 3.1 eV
+#
+# Valence band offset: delEv = Eg_ox - Eg_ch - delEc
+#   Si/SiO2:            delEv = 9.0 - 1.12 - 3.1 = 4.78 eV
+#   InGaAs/Al2O3:       delEv = 6.5 - 0.74 - 3.1 = 2.66 eV
+#   InAs/Al2O3:         delEv = 6.5 - 0.36 - 3.6 = 2.54 eV
+#   GaN/Al2O3:          delEv = 6.5 - 3.2 - 2.16 = 1.14 eV
+#
+# =============================================================================
+# MACHINE-READABLE PARAMETER BLOCK: mat_para.dat format
+# =============================================================================
+# This block is read by the .cc code. Select ONE channel/oxide combination
+# and copy the corresponding line to mat_para.dat
+#
+# Format (16 values per line):
+# Ns  ni  Eg  eps  Egox1  meox1  mhox1  epsox1  Egox2  meox2  mhox2  epsox2  delEc1  delEv1  delEc2  delEv2
+#
+# --- Si / SiO2 (single oxide) ---
+# 2.5e15  1.45e10  1.12  11.8  9.0  0.5  0.5  3.9  9.0  0.5  0.5  3.9  3.1  4.78  3.1  4.78
+#
+# --- Si / HfO2 (single oxide) ---
+# 2.5e15  1.45e10  1.12  11.8  5.9  0.2  0.2  25.0  5.9  0.2  0.2  25.0  2.38  2.4  2.38  2.4
+#
+# --- In0.53Ga0.47As / Al2O3 (single oxide) ---
+# 2.5e15  6.4e11  0.74  13.9  6.5  0.2  0.2  9.0  6.5  0.2  0.2  9.0  3.1  2.66  3.1  2.66
+#
+# --- InAs / Al2O3 (single oxide) ---
+# 2.5e15  2e14  0.36  15.15  6.5  0.2  0.2  9.0  6.5  0.2  0.2  9.0  3.6  2.54  3.6  2.54
+#
+# --- GaN / Al2O3 (single oxide) ---
+# 2.5e15  2e-10  3.2  8.9  6.5  0.2  0.2  9.0  6.5  0.2  0.2  9.0  2.16  1.14  2.16  1.14
+#
+# --- In0.53Ga0.47As / Al2O3(ox1) + HfO2(ox2) composite ---
+# 2.5e15  6.4e11  0.74  13.9  6.5  0.2  0.2  9.0  5.9  0.2  0.2  25.0  3.1  2.66  2.38  2.02
+#
+# =============================================================================
+# CHANNEL PARAMETERS: channel_para.dat format
+# =============================================================================
+# Format: mq1  mq2  mz1  mz2  g1  g2
+#
+# --- Silicon (2 valleys: Delta_4 and Delta_2) ---
+# 0.43  0.19  0.19  0.98  4  2
+#
+# --- In0.53Ga0.47As (1 valley) ---
+# 0.04  0.04  0.04  0.04  1  0
+#
+# --- InAs (1 valley) ---
+# 0.08  0.08  0.08  0.08  1  0
+#
+# --- GaN (1 valley) ---
+# 0.3  0.3  0.3  0.3  1  0
+#
+# =============================================================================
+# DEVICE GEOMETRY: dev_para.dat format
+# =============================================================================
+# Format: R_nw(nm)  tox1(nm)  tox2(nm)
+#
+# --- dnw=5nm, tox=2nm single oxide ---
+# 2.5  2.0  0.0
+#
+# --- dnw=5nm, Al2O3(1nm)/HfO2(1nm) composite ---
+# 2.5  1.0  1.0
+#
+# --- dnw=6nm, tox=4nm (validation case from Fig.4) ---
+# 3.0  4.0  0.0
+#
+# =============================================================================
