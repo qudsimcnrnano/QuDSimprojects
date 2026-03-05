@@ -1,9 +1,8 @@
 # =============================================================================
 # Material Parameters for Flash Memory High-K Device Simulator
 # =============================================================================
-# Source: dune_highk.cc (serial code) + Mahajan et al. IEEE 2017 (Table II)
-#
-# Device: SONOS/TANOS-type Flash Memory with High-K dielectric stack
+
+# Device:e Flash Memory with High-K dielectric stack
 # Structure (gate to substrate):
 #   Gate Metal
 #   |-- HTO  (region 503) -- blocking oxide near gate
